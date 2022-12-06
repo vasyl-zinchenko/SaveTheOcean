@@ -1,0 +1,13 @@
+.page {
+  background: $bgrColor;
+  scroll-behavior: smooth;
+  font-family: $fontFamilyInter;
+
+  &__body {
+    margin: 0 24px;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+}

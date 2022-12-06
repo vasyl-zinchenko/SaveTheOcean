@@ -1,0 +1,35 @@
+.hero {
+  &__title {
+    font-family: "Syncopate", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+
+    &_black {
+      font-size: 42px;
+      color: #101010;
+    }
+
+    &_blue {
+      font-size: 53px;
+      color: white;
+      border: #24a9f4;
+      -webkit-text-stroke: 1px #24a9f4;
+    }
+  }
+
+  &__headline {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #101010;
+  }
+
+  &__paragraph {
+    font-family: "KyivType Sans", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #101010;
+  }
+}

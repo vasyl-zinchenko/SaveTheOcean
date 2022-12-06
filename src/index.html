@@ -1,13 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Save the Ocean</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" >
     <link rel="stylesheet" href="./styles/main.scss">
+    <script type="module" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" >
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+
+  <body class="page__body">
+    <header class="header">
+      <div class="header__content">
+        <div class="header__nav">
+          <a href="#" class="logo">
+            save<span class="logo_blue">the</span>ocean
+          </a>
+
+          <div class="header__icons">
+            <a href="#menu" class="icon header__menu-opener"></a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="header__menu menu" id="menu">
+        <div class="menu__container-top">
+          <a href="#" class="icon menu__cross"></a>
+        </div>
+
+        <ul class="menu__list">
+          <li class="menu-item">
+            <a class="menu-item__link" href="#">Abous us</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item__link" href="#our-projects">Our projects</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item__link" href="#stories">Stories</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item_link" href="#join-the-team">Join the team</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#" class="scroll-up"></a>
+    </header>
+    <div class="underline"></div>
+    <main class="main">
+      <section class="hero">
+        <section class="hero__content">
+          <section class="hero__title">
+            <h1 class="hero__title_black">
+              About the
+              <span class="hero__title_blue">
+                project
+              </span>
+            </h1>
+          </section>
+
+          <div class="underline"></div>
+
+          <h2 class="hero__headline">a nice place for powerful slogan</h2>
+
+          <div class="underline"></div>
+
+          <p class="hero__paragraph">
+            The purpose of lorem ipsum is to create a natural
+            looking block of text that doesn't distract from
+            the layout. A practice not without controversy,
+            laying out pages with meaningless filler text can
+            be very useful when the focus is meant to be on design,
+            not content.
+          </p>
+
+          <div class="underline"></div>
+
+          <h2 class="hero__headline" id="our-projects">Our projects</h2>
+
+          <div class="underline"></div>
+
+          <h2 class="hero__headline" id="stories">Our stories</h2>
+
+          <div class="underline"></div>
+        </section>
+
+        <section class="hero__slider">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  class="swiper-slide__picture"
+                  alt="slider-1"
+                  src="./images/sliders/slide_1.png">
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                class="swiper-slide__picture"
+                alt="slider-2"
+                src="./images/sliders/slide_2.png">
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                class="swiper-slide__picture"
+                alt="slider-3"
+                src="./images/sliders/slide_3.png">
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </section>
+
+      </section>
+
+
+    </main>
+
+    <footer class="footer">
+
+
+      <section
+        class="footer__social-media social-media" id="our-story">
+
+        <a href="#">
+          <span class="fa-brands fa-facebook-f social-media__icon social-media__icon--fb" target="_blank"></span>
+        </a>
+
+        <a href="#">
+          <span class="fa-brands fa-twitter social-media__icon social-media__icon--ig" target="_blank"></span>
+        </a>
+
+        <a href="#">
+          <span class="fa-brands fa-instagram social-media__icon social-media__icon--ig" target="_blank"></span>
+        </a>
+      </section>
+
+      <p class="footer__copyright">
+        © 2019 All rights reserved. Terms of Use & Privacy Policy
+      </p>
+    </footer>
   </body>
 </html>

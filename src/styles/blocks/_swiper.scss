@@ -1,0 +1,12 @@
+.swiper {
+  width: 327px;
+  height: 200px;
+
+  &-slide {
+    width: inherit;
+
+    &__picture {
+      width: inherit;
+    }
+  }
+}
