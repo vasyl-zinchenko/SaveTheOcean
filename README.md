@@ -1,2 +1,1 @@
-
-    - [DEMO LINK](https://vasylzinchenko.github.io/SaveTheOcean/)
+- [DEMO LINK](https://vasylzinchenko.github.io/SaveTheOcean/)
