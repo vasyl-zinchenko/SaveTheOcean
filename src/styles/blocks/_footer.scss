@@ -7,7 +7,7 @@
     padding: 40px 30px;
 
     @include onLaptop {
-      padding: 60px 40px;
+      padding: 60px 40px 80px 40px;
     }
   }
 
@@ -63,6 +63,10 @@
       font-size: 18px;
       line-height: 19px;
       color: #ffffff;
+
+      @include onLaptop {
+        font-size: 16px;
+      }
     }
 
     &_info {
