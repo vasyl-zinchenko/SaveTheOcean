@@ -10,12 +10,22 @@
     font-size: 20px;
     line-height: 21px;
     color: #101010;
+
+    @include onTablet {
+      font-size: 36px;
+      line-height: 37px;
+    }
   }
 
   &__nav {
     @extend %flexAlignCenter;
     justify-content: space-between;
     padding: 39px 0 0;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: 82% 5% 5%;
+    }
   }
 
 

@@ -3,10 +3,12 @@
   margin-top: 200px;
   width: 48px;
   height: 32px;
-  left: 104px;
-  top: 440px;
   background: #575757;
   border-radius: 29px;
+
+  @include onTablet {
+    margin-top: 0;
+  }
 
   &__light {
     background-image: url(../images/theme-swither-light.svg);

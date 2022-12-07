@@ -1,6 +1,22 @@
 .form {
   font-size: 1.13rem;
-  max-width: 340px;
+  width: 340px;
+
+  @include onTablet {
+    margin-bottom: 50px;
+  }
+
+  &__label {
+    @include onTablet {
+      width: 425px;
+    }
+  }
+
+  @include onTablet {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
   &__field {
     background-color: $colorDesertStorm;
@@ -13,6 +29,10 @@
     line-height: 24px;
     border: 1px solid #c6c6c6;
     outline: none;
+
+    @include onTablet {
+      padding: 11px 20px;
+    }
 
     &::placeholder {
       font-family: 'KyivType Sans';

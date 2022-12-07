@@ -17,6 +17,11 @@
     color: #ffffff;
     transition: 0.3s;
 
+    @include onTablet {
+      margin: 0;
+      width: 208px;
+    }
+
     &:hover {
       background: $colorSurfieGreen;
     }

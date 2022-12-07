@@ -12,6 +12,11 @@
     line-height: 25px;
     color: #ffffff;
     margin-bottom: 45px;
+
+    @include onTablet {
+      font-size: 36px;
+      line-height: 37px;
+    }
   }
 
   &__headline {
@@ -21,6 +26,12 @@
     line-height: 33px;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include onTablet {
+      font-size: 24px;
+      line-height: 25px;
+      font-weight: 600;
+    }
   }
 
   &__contact-us_information {
@@ -46,5 +57,10 @@
       line-height: 14px;
       color: #bebebe;
     }
+  }
+
+  &__bottom {
+    height: 57px;
+    background: #1a1a1a;
   }
 }

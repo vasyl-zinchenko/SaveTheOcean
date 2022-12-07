@@ -9,5 +9,9 @@
     &--with-menu {
       overflow: hidden;
     }
+
+    @include onTablet {
+      margin: 0 32px;
+    }
   }
 }

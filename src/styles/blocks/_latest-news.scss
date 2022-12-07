@@ -1,5 +1,6 @@
 .latest-news {
   box-sizing: border-box;
+  overflow: hidden;
 
   &__card {
     width: 295px;
@@ -8,10 +9,19 @@
     border: 1px solid #101010;
     box-sizing: content-box;
     margin-bottom: 56px;
+
+    @include onTablet {
+      width: 238px;
+    }
   }
 
   &__swiper {
     overflow: hidden;
+
+    @include onTablet {
+      overflow: visible;
+      width: 230px;
+    }
 
     &-wrapper {
       display: flex;
@@ -44,8 +54,11 @@
       font-family: "KyivType Sans";
       font-size: 16px;
       line-height: 24px;
-
       color: #101010;
+
+      @include onTablet {
+        padding: 4px 16px 30px 16px;
+      }
     }
   }
 
@@ -56,5 +69,9 @@
     line-height: 25px;
     text-transform: uppercase;
     color: #101010;
+
+    @include onTablet {
+      font-size: 32px;
+    }
   }
 }
