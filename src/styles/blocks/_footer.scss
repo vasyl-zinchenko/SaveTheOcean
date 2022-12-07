@@ -9,6 +9,10 @@
     @include onLaptop {
       padding: 60px 40px 80px 40px;
     }
+
+    @include onLaptopL {
+      padding: 60px 71px 85px 71px;
+    }
   }
 
   &__logo {

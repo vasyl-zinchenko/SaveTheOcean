@@ -22,5 +22,10 @@
     @include onLaptop {
       padding: 0 80px;
     }
+
+    @include onLaptopL {
+      font-size: 36px;
+      line-height: 37px;
+    }
   }
 }

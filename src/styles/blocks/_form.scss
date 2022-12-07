@@ -14,6 +14,10 @@
     @include onLaptop {
       width: 470px;
     }
+
+    @include onLaptopL {
+      width: 590px;
+    }
   }
 
   @include onTablet {

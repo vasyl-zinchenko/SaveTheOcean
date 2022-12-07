@@ -1,66 +1,4 @@
 .latest-news {
-  box-sizing: border-box;
-  overflow: hidden;
-
-  &__card {
-    width: 295px;
-    height: 370px;
-    box-sizing: border-box;
-    border: 1px solid #101010;
-    box-sizing: content-box;
-    margin-bottom: 56px;
-
-    @include onTablet {
-      width: 238px;
-    }
-  }
-
-  &__swiper {
-    overflow: hidden;
-
-    @include onTablet {
-      overflow: visible;
-      width: 230px;
-    }
-
-    &-wrapper {
-      display: flex;
-      gap: 24px;
-    }
-  }
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
-
-    &_picture {
-      width: inherit;
-      padding-bottom: 11px;
-    }
-
-    &_headline {
-      padding: 0 25px;
-      font-family: "Syncopate", sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 20px;
-      text-transform: uppercase;
-      color: #101010;
-    }
-
-    &_paragraph {
-      padding: 5px 25px 25px 25px;
-      font-family: "KyivType Sans";
-      font-size: 16px;
-      line-height: 24px;
-      color: #101010;
-
-      @include onTablet {
-        padding: 4px 16px 30px 16px;
-      }
-    }
-  }
 
   &__headline {
     font-family: "Syncopate", sans-serif;
@@ -74,4 +12,26 @@
       font-size: 32px;
     }
   }
-}
+    &__card_headline {
+      padding: 0 25px;
+      font-family: "Syncopate", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #101010;
+    }
+
+    &__card_paragraph {
+      padding: 5px 25px 25px 25px;
+      font-family: "KyivType Sans";
+      font-size: 16px;
+      line-height: 24px;
+      color: #101010;
+
+      @include onTablet {
+        padding: 4px 16px 30px 16px;
+      }
+    }
+  }
+

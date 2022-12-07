@@ -6,11 +6,19 @@
     margin-bottom: 71px;
   }
 
+  @include onLaptopL {
+    margin-bottom: 88px;
+  }
+
   &__content {
 
     @include onLaptop {
       margin-top: 9px;
       max-width: 230px;
+    }
+
+    @include onLaptopL {
+      max-width: 288px;
     }
   }
 
@@ -34,6 +42,10 @@
       @include onLaptop {
         font-size: 29px;
       }
+
+      @include onLaptopL {
+        font-size: 37px;
+      }
     }
 
     &_blue {
@@ -48,6 +60,10 @@
 
       @include onLaptop {
         font-size: 37px;
+      }
+
+      @include onLaptopL {
+        font-size: 47px;
       }
     }
   }

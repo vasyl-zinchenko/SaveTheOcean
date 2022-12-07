@@ -6,4 +6,8 @@
     color: #24a9f4;
     font-weight: 700;
   }
+
+  @include onLaptopL {
+    margin-bottom: 8px;
+  }
 }

@@ -20,6 +20,9 @@
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     >
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
   </head>
 
   <body>
@@ -158,10 +161,8 @@
             <div class="underline"></div>
           </section>
 
-          <section class="hero-slider">
-            <!-- Additional required wrapper -->
+          <!-- <section class="hero-slider">
             <div class="hero-slider__wrapper swiper-wrapper">
-              <!-- Slides -->
               <div class="hero-slider__slide swiper-slide">
                 <img
                   class="hero-slider__slide_picture swiper-slide__picture"
@@ -188,96 +189,82 @@
 
               <div class="swiper-pagination"></div>
 
-              <!-- If we need navigation buttons -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
             </div>
-            <!-- If we need pagination -->
-          </section>
+          </section> -->
         </section>
 
         <section class="latest-news">
           <h2 class="latest-news__headline">Latest news</h2>
 
-          <div class="latest-news__swiper">
+          <div class="latest-news__swiper swiper-container">
             <!-- Additional required wrapper -->
             <div class="latest-news__swiper-wrapper swiper-wrapper">
               <!-- Slides -->
-              <div class="latest-news__swiper-slide swiper-slide">
-                <div class="latest-news__card">
-                  <img
-                    class="latest-news__card_picture swiper-slide__picture"
-                    alt="slider-1"
-                    src="./images/last-news/last-news-1.jpg"
-                  >
+              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+                <img
+                  class="latest-news__card_picture swiper-slide__picture"
+                  alt="slider-1"
+                  src="./images/last-news/last-news-1.jpg"
+                >
 
-                  <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
+                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
 
-                  <p class="latest-news__card_paragraph">
-                    The Global Youth Mentor Program gives motivated Youth Leaders
-                    the tools and support to create lasting systemic change in
-                    their communities.
-                  </p>
-                </div>
+                <p class="latest-news__card_paragraph">
+                  The Global Youth Mentor Program gives motivated Youth Leaders
+                  the tools and support to create lasting systemic change in
+                  their communities.
+                </p>
               </div>
+              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+                <img
+                  class="latest-news__card_picture swiper-slide__picture"
+                  alt="slider-2"
+                  src="./images/last-news/last-news-2.jpg"
+                >
 
-              <div class="latest-news__swiper-slide swiper-slide">
-                <div class="latest-news__card">
-                  <img
-                    class="latest-news__card_picture swiper-slide__picture"
-                    alt="slider-1"
-                    src="./images/last-news/last-news-2.jpg"
-                  >
+                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
 
-                  <h3 class="latest-news__card_headline">
-                    Here is the result of our last project in africa
-                  </h3>
-
-                  <p class="latest-news__card_paragraph">
-                    The purpose of lorem ipsum is to create a natural looking...
-                  </p>
-                </div>
+                <p class="latest-news__card_paragraph">
+                  The Global Youth Mentor Program gives motivated Youth Leaders
+                  the tools and support to create lasting systemic change in
+                  their communities.
+                </p>
               </div>
+              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+                <img
+                  class="latest-news__card_picture swiper-slide__picture"
+                  alt="slider-3"
+                  src="./images/last-news/last-news-3.jpg"
+                >
 
-              <div class="latest-news__swiper-slide swiper-slide">
-                <div class="latest-news__card">
-                  <img
-                    class="latest-news__card_picture swiper-slide__picture"
-                    alt="slider-1"
-                    src="./images/last-news/last-news-3.jpg"
-                  >
+                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
 
-                  <h3 class="latest-news__card_headline">
-                    Time to change something. There is no time left
-                  </h3>
-
-                  <p class="latest-news__card_paragraph">
-                    The purpose of lorem ipsum is to create a natural looking
-                    block...
-                  </p>
-                </div>
+                <p class="latest-news__card_paragraph">
+                  The Global Youth Mentor Program gives motivated Youth Leaders
+                  the tools and support to create lasting systemic change in
+                  their communities.
+                </p>
               </div>
+              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+                <img
+                  class="latest-news__card_picture swiper-slide__picture"
+                  alt="slider-1"
+                  src="./images/last-news/last-news-1.jpg"
+                >
 
-              <div class="latest-news__swiper-slide swiper-slide">
-                <div class="latest-news__card">
-                  <img
-                    class="latest-news__card_picture swiper-slide__picture"
-                    alt="slider-1"
-                    src="./images/last-news/last-news-4.jpg"
-                  >
+                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
 
-                  <h3 class="latest-news__card_headline">
-                    How can we change the situation with the global warming
-                    cleaning the ocean?
-                  </h3>
-
-                  <p class="latest-news__card_paragraph">
-                    The purpose of lorem...
-                  </p>
-                </div>
+                <p class="latest-news__card_paragraph">
+                  The Global Youth Mentor Program gives motivated Youth Leaders
+                  the tools and support to create lasting systemic change in
+                  their communities.
+                </p>
               </div>
             </div>
-            <div class="swiper-scrollbar"></div>
+            <div class="swiper-scrollbar">
+            </div>
           </div>
         </section>
 
