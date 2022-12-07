@@ -1,0 +1,23 @@
+.theme-switcher {
+  display: block;
+  margin-top: 200px;
+  width: 48px;
+  height: 32px;
+  left: 104px;
+  top: 440px;
+  background: #575757;
+  border-radius: 29px;
+
+  &__light {
+    background-image: url(../images/theme-swither-light.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+  }
+}

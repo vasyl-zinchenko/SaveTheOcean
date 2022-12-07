@@ -11,36 +11,30 @@
 // matchMedia();
 // featureSlider();
 
-// window.addEventListener('hashchange', () => {
-//   if (window.location.hash === '#menu') {
-//     document.body.classList.add('page__body--with-menu');
-//   } else {
-//     document.body.classList.remove('page__body--with-menu');
-//   }
-// });
 import Swiper from 'swiper';
+
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#menu') {
+    document.body.classList.add('page__body--with-menu');
+  } else {
+    document.body.classList.remove('page__body--with-menu');
+  }
+});
+
 // import Swiper styles
 
-const swiper = new Swiper('.swiper');
+const swiper = new Swiper('.hero-slider', {
+  direction: 'horizontal',
+});
 
-//  new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+const lastNewsSwiper = new Swiper('.latest-news__swiper', {
+  // Optional parameters
+  direction: 'horizontal',
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    dragClass: true,
+  },
+});

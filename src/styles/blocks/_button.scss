@@ -1,1 +1,32 @@
-//
+.button {
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+
+  &--form {
+    width: 328px;
+    height: 48px;
+    margin: 16px 0 40px;
+    background: #101010;
+    font-family: "Syncopate";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.3s;
+
+    &:hover {
+      background: $colorSurfieGreen;
+    }
+
+    &:focus {
+      box-shadow: 1px 4px 16px rgba(47, 47, 165, 0.4);
+    }
+
+    &:disabled {
+      background: $colorPaleBlueLily;
+    }
+  }
+}

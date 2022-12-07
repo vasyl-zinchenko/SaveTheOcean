@@ -1,1 +1,41 @@
-//
+.form {
+  font-size: 1.13rem;
+  max-width: 340px;
+
+  &__field {
+    background-color: $colorDesertStorm;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+
+    font-family: $fontFamilyInter;
+    font-size: 0.88rem;
+    line-height: 24px;
+    border: 1px solid #c6c6c6;
+    outline: none;
+
+    &::placeholder {
+      font-family: 'KyivType Sans';
+      font-size: 16px;
+      line-height: 22px;
+      color: #101010;
+    }
+
+    &:valid {
+      font-family: $fontFamilyHelvetica;
+      font-size: 1rem;
+      border: 1px solid $colorSuccessGreen;
+      color: $colorSurfieGreen;
+    }
+
+    &:focus {
+      border: 1px solid $colorSurfieGreen;
+      color: $colorDune;
+    }
+
+    &-message {
+      margin-top: 20px;
+      resize: none;
+    }
+  }
+}

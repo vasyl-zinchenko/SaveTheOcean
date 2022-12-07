@@ -32,4 +32,15 @@
     line-height: 22px;
     color: #101010;
   }
+
+  &-slider {
+    width: 328px;
+    height: 200px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+    &__slide_picture {
+      height: inherit;
+    }
+  }
 }

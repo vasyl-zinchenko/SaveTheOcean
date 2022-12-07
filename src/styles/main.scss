@@ -1,8 +1,8 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/extends";
+@import "./utils/resets";
 
-@import "./blocks/resets";
 @import "./blocks/icon";
 @import "./blocks/menu";
 @import "./blocks/page";
@@ -19,3 +19,6 @@
 @import "./blocks/underline";
 @import "./utils/fonts";
 @import "./blocks/swiper";
+@import "./blocks/latest-news";
+@import "./blocks/notification";
+@import "./blocks/theme-switcher";

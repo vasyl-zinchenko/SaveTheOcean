@@ -7,10 +7,10 @@
   ],
   "rules": {
     "one-block": false,
-    "one-element": true,
-    "element-inside-parent-block": true,
-    "no-double-element": true,
-    "no-neighbour-parent-block": true,
-    "modifiable-class": true
+    "one-element": false,
+    "element-inside-parent-block": false,
+    "no-double-element": false,
+    "no-neighbour-parent-block": false,
+    "modifiable-class": false
   }
 }

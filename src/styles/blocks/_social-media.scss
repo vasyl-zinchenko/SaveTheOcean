@@ -1,7 +1,23 @@
 .social-media {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 auto;
-  max-width: 140px;
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Syncopate";
+    font-weight: 700;
+    height: 48px;
+    background-color: white;
+    color: #101010;
+  }
 }
