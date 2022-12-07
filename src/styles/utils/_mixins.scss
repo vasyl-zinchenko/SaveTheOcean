@@ -10,7 +10,7 @@
   }
 }
 
-@mixin onLaptopt {
+@mixin onLaptop {
   @media (min-width: 1024px) {
     @content;
   }

@@ -16,6 +16,11 @@
 
     @include onTablet {
       padding: 0 45px;
+      margin-top: 78px;
+    }
+
+    @include onLaptop {
+      padding: 0 80px;
     }
   }
 }

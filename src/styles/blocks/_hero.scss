@@ -1,4 +1,19 @@
 .hero {
+
+  @include onLaptop {
+    display: grid;
+    grid-template-columns: 1fr 2.8fr;
+    margin-bottom: 71px;
+  }
+
+  &__content {
+
+    @include onLaptop {
+      margin-top: 9px;
+      max-width: 230px;
+    }
+  }
+
   &__title {
     font-family: "Syncopate", sans-serif;
     text-transform: uppercase;
@@ -15,6 +30,10 @@
       @include onTablet {
         font-size: 91px;
       }
+
+      @include onLaptop {
+        font-size: 29px;
+      }
     }
 
     &_blue {
@@ -25,6 +44,10 @@
 
       @include onTablet {
         font-size: 115px;
+      }
+
+      @include onLaptop {
+        font-size: 37px;
       }
     }
   }
@@ -56,6 +79,11 @@
       height: 419px;
       margin-bottom: 70px;
       margin-top: 29px;
+    }
+
+    @include onLaptop {
+      margin: 0;
+      height: 615px;
     }
 
     &__slide_picture {

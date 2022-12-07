@@ -5,6 +5,10 @@
   &__wrapper {
     margin-top: 100px;
     padding: 40px 30px;
+
+    @include onLaptop {
+      padding: 60px 40px;
+    }
   }
 
   &__logo {
@@ -32,12 +36,21 @@
       line-height: 25px;
       font-weight: 600;
     }
+
+    @include onLaptop {
+      font-size: 36px;
+      margin-top: 62px;
+    }
   }
 
   &__contact-us_information {
     display: flex;
     flex-direction: column;
     gap: 34px;
+
+    @include onLaptop {
+      flex-direction: row;
+    }
   }
 
   &__inforamtion-block {

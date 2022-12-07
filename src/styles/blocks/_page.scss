@@ -13,5 +13,9 @@
     @include onTablet {
       margin: 0 32px;
     }
+
+    @include onLaptop {
+      margin: 0 50px;
+    }
   }
 }

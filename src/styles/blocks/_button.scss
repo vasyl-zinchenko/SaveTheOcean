@@ -22,6 +22,10 @@
       width: 208px;
     }
 
+    @include onLaptop {
+      width: 251px;
+    }
+
     &:hover {
       background: $colorSurfieGreen;
     }
