@@ -125,4 +125,15 @@
       }
     }
   }
+
+  &__theme-switcher {
+    @include onTablet {
+      display: none;
+    }
+  }
+}
+
+.blurBackground {
+  background: rgba(217, 217, 217, 0.3);
+  filter: blur(7.5px);
 }

@@ -1,5 +1,4 @@
 .latest-news {
-
   &__headline {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
@@ -7,13 +6,27 @@
     line-height: 25px;
     text-transform: uppercase;
     color: #101010;
+    margin-bottom: 24px;
 
     @include onTablet {
       font-size: 32px;
     }
   }
-    &__card_headline {
-      padding: 0 25px;
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__card {
+
+    &_content-wrapper {
+      text-align: initial;
+      height: 164px;
+      margin: 11px 25px 25px 25px;
+    }
+
+    &_headline {
+      margin-bottom: 4px;
       font-family: "Syncopate", sans-serif;
       font-weight: 700;
       font-size: 16px;
@@ -22,16 +35,19 @@
       color: #101010;
     }
 
-    &__card_paragraph {
-      padding: 5px 25px 25px 25px;
+    &_paragraph {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
       font-family: "KyivType Sans";
       font-size: 16px;
       line-height: 24px;
       color: #101010;
+      display: block;
+      overflow: hidden;
 
       @include onTablet {
         padding: 4px 16px 30px 16px;
       }
     }
   }
-
+}

@@ -3,15 +3,50 @@
 // import * as scrollUpArrow from './scroll-up';
 // import * as activeLink from './active-menu-link';
 // import * as matchMedia from './match-media';
-// import * as featureSlider from './feature-slider';
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+import Countable from 'countable';
+import 'swiper/swiper-bundle.min.css';
 
-// preventSubmit();
-// scrollUpArrow();
-// activeLink();
-// matchMedia();
-// featureSlider();
+import * as heroSlider from './hero-slider';
 
-import Swiper from 'swiper';
+const header = document.querySelector('.header');
+const mainSection = document.querySelector('.main');
+const menuOpener = document.querySelector('.header__menu-opener');
+const menuCross = document.querySelector('.menu__cross');
+const footer = document.querySelector('.footer');
+const pageBody = document.querySelector('.page__body');
+let isBlur = false;
+const scrollbar = document.querySelector('.swiper-scrollbar');
+const scrollbarDrag = document.querySelector('.swiper-scrollbar-drag');
+
+scrollbar.style.height = '16px';
+scrollbar.style.background = '#efefef';
+
+if (scrollbarDrag) {
+  scrollbarDrag.style.background = 'black';
+}
+
+function changeBlur(...arg) {
+  if (isBlur) {
+    arg.map((el) => el.classList.add('blurBackground'));
+    pageBody.style.background = 'rgba(217, 217, 217, 0.3)';
+  }
+
+  if (!isBlur) {
+    arg.map((el) => el.classList.remove('blurBackground'));
+    pageBody.style.background = 'white';
+  }
+}
+
+menuOpener.addEventListener('click', function() {
+  isBlur = true;
+  changeBlur(header, mainSection, footer);
+});
+
+menuCross.addEventListener('click', function() {
+  isBlur = false;
+  changeBlur(header, mainSection, footer);
+});
 
 window.addEventListener('hashchange', () => {
   if (window.location.hash === '#menu') {
@@ -21,26 +56,9 @@ window.addEventListener('hashchange', () => {
   }
 });
 
-// import Swiper styles
-
-const swiper = new Swiper('.hero-slider', {
-  direction: 'horizontal',
-});
-
-// const lastNewsSwiper = new Swiper('.latest-news__swiper', {
-//   // Optional parameters
-//   direction: 'horizontal',
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//     draggable: true,
-//     dragClass: true,
-//   },
-// });
-
 const lastNewsSwiper = new Swiper('.latest-news__swiper', {
-  slidesPerView: 'auto',
+  modules: [Scrollbar],
+  draggable: true,
   spaceBetween: 16,
   breakpoints: {
     320: {
@@ -49,7 +67,7 @@ const lastNewsSwiper = new Swiper('.latest-news__swiper', {
     },
 
     375: {
-      slidesPerView: 1.21,
+      slidesPerView: 1.13,
       spaceBetween: 24,
     },
 
@@ -90,53 +108,50 @@ const lastNewsSwiper = new Swiper('.latest-news__swiper', {
       spaceBetween: 32,
     },
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    visible: true,
   },
 });
 
-// const cardSwiper = new Swiper('.latest-news__swiper', {
-//   loop: false,
-//   autoHeight: false,
-//   spaceBetween: 10,
-//   breakpoints: {
-//     375: {
-//       slidesPerView: 1.2,
-//       spaceBetween: 24,
-//     },
-//     400: {
-//       slidesPerView: 1.5,
-//       spaceBetween: 16,
-//     },
-//     500: {
-//       slidesPerView: 2,
-//       spaceBetween: 16,
-//     },
-//     600: {
-//       slidesPerView: 2.5,
-//       spaceBetween: 16,
-//     },
-//     768: {
-//       slidesPerView: 3.2,
-//       spaceBetween: 16,
-//     },
-//     1024: {
-//       slidesPerView: 4,
-//       spaceBetween: 16,
-//     },
-//     1366: {
-//       slidesPerView: 4,
-//       spaceBetween: 24,
-//     },
-//     1696: {
-//       slidesPerView: 4,
-//       spaceBetween: 32,
-//     },
-//   },
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//     draggable: true,
-//     dragClass: true,
-//   },
-// });
+const headers = document.querySelectorAll('.latest-news__card_headline');
+const newsCardText = document.getElementsByClassName(
+  'latest-news__card_paragraph'
+);
+
+function getCountOfLine(element) {
+  return Math.round(element.offsetHeight / 20);
+}
+
+function setLineClapm(element, count) {
+  return element.setAttribute(
+    'style',
+    `display: -webkit-box; -webkit-line-clamp: ${count}`
+  );
+}
+
+for (let i = 0; i < headers.length; i++) {
+  if (getCountOfLine(headers[i]) === 1) {
+    setLineClapm(newsCardText[i], 6);
+  }
+
+  if (getCountOfLine(headers[i]) === 2) {
+    setLineClapm(newsCardText[i], 4);
+  }
+
+  if (getCountOfLine(headers[i]) === 3) {
+    setLineClapm(newsCardText[i], 4);
+  }
+
+  if (getCountOfLine(headers[i]) === 4) {
+    setLineClapm(newsCardText[i], 4);
+  }
+
+  if (getCountOfLine(headers[i]) === 5) {
+    setLineClapm(newsCardText[i], 3);
+  }
+
+  if (getCountOfLine(headers[i]) === 6) {
+    setLineClapm(newsCardText[i], 2);
+  }
+}

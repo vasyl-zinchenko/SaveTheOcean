@@ -1,5 +1,4 @@
 .hero {
-
   @include onLaptop {
     display: grid;
     grid-template-columns: 1fr 2.8fr;
@@ -11,7 +10,6 @@
   }
 
   &__content {
-
     @include onLaptop {
       margin-top: 9px;
       max-width: 230px;
@@ -84,26 +82,102 @@
     color: #101010;
   }
 
-  &-slider {
-    width: 328px;
-    height: 200px;
-    margin-bottom: 50px;
-    overflow: hidden;
-
+  &__slider {
+    margin-bottom: 20px;
+    
     @include onTablet {
-      width: 100%;
-      height: 419px;
-      margin-bottom: 70px;
-      margin-top: 29px;
     }
 
     @include onLaptop {
-      margin: 0;
-      height: 615px;
     }
 
-    &__slide_picture {
-      height: inherit;
+    &_slide {
+      width: -webkit-fill-available;
+      display: none;
+      opacity: 0;
+      transition: 0.4s;
+
+      &-picture {
+        object-fit: cover;
+        width: inherit;
+      }
+    }
+
+    &_controler {
+      display: flex;
+      transform: translate(17px, -43px);
+      gap: 17px;
+      align-items: center;
+    }
+
+    &_pagination {
+      display: flex;
+      align-items: baseline;
+      font-family: "Syncopate";
+      font-size: 18px;
+      line-height: 19px;
+      color: #ffffff;
+
+      &--fist {
+        font-weight: 700;
+      }
+    }
+
+    &_button-prev {
+
+      &::after {
+        content: "";
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 20.94px;
+        transition: 0.2s;
+        background-image: url(/images/array-left.svg);
+        background-size: contain;
+      }
+
+      &:hover:after {
+        content: "";
+        background-image: url(/images/array-left-hover.png);
+        background-size: contain;
+        width: 24px;
+        height: 20.94px;
+      }
+    }
+
+    &_button-next {
+      &::after {
+        content: "";
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 20.94px;
+        background-image: url(/images/array-right.svg);
+
+        transition: 0.2s;
+      }
+      &:hover:after {
+        content: "";
+        background-image: url(/images/array-right-hover.svg);
+      }
     }
   }
+
+  &__slider--active {
+    display: block;
+    opacity: 1;
+    animation: showSlider 400ms linear;
+  }
+}
+
+@keyframes showSlider {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.swiper-scrollbar {
 }

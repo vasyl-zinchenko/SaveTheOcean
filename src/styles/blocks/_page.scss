@@ -4,7 +4,7 @@
 
 
   &__body {
-    margin: 0 24px;
+    padding: 0 24px;
     background: white;
     overflow-x: hidden;
 
@@ -13,11 +13,11 @@
     }
 
     @include onTablet {
-      margin: 0 32px;
+      padding: 0 32px;
     }
 
     @include onLaptop {
-      margin: 0 50px;
+      padding: 0 50px;
     }
   }
 }

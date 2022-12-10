@@ -28,9 +28,22 @@
     }
   }
 
-
   &__menu-opener {
-    display: block;
-    background-image: url(/images/menu.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #101010;
+  }
+
+  &__theme-swithcer {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
   }
 }

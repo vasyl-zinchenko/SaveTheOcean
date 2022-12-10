@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Save the Ocean</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Syncopate:wght@400;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="./styles/main.scss" >
     <script type="module" src="scripts/main.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     >
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    >
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
   </head>
 
   <body>
@@ -34,106 +26,116 @@
               save<span class="logo_blue">the</span>ocean
             </a>
 
-            <div class="theme-switcher">
+            <div class="theme-switcher header__theme-swithcer">
               <div class="theme-switcher__light"></div>
             </div>
 
             <div class="header__icons">
-              <a href="#menu" class="icon header__menu-opener"></a>
+              <a href="#menu" class="icon header__menu-opener">
+                <svg
+                width="24"
+                height="14"
+                viewBox="0 0 24 14"
+                fill="#101010"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                  <path
+                    d="M0 14H24V11.6667H0V14ZM0 8.16667H24V5.83333H0V8.16667ZM0 0V2.33333H24V0H0Z"
+                    fill="white"
+                  >
+                    <use href="#menu"></use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-
-        <nav class="header__menu menu" id="menu">
-          <a href="#" class="icon menu__cross"></a>
-
-          <ul class="menu__list">
-            <li class="menu-item">
-              <a class="menu-item__link" href="#">Abous us</a>
-            </li>
-
-            <li class="menu-item">
-              <a class="menu-item__link" href="#our-projects">Our projects</a>
-            </li>
-
-            <li class="menu-item">
-              <a class="menu-item__link" href="#stories">Stories</a>
-            </li>
-
-            <li class="menu-item">
-              <a class="menu-item__link" href="#stories">Join the team</a>
-            </li>
-          </ul>
-
-          <div class="theme-switcher">
-            <div class="theme-switcher__light"></div>
-          </div>
-
-          <section class="menu__contact-us">
-            <h3 class="menu__contact-us__title">
-              Contact us
-            </h3>
-
-            <section class="menu__contact-us_information">
-              <div class="menu__inforamtion-block">
-                <p class="menu__inforamtion-block_title">+38( 093 ) 123-23-23</p>
-                <p class="menu__inforamtion-block_info">Mo-Fri 9:00-18:00</p>
-              </div>
-
-              <div class="menu__inforamtion-block">
-                <p class="menu__inforamtion-block_title">savetheocean@.org</p>
-                <p class="menu__inforamtion-block_info">for projects and questions</p>
-              </div>
-
-              <div class="menu__inforamtion-block">
-                <p class="menu__inforamtion-block_title">hrsavetheocean@.org</p>
-                <p class="menu__inforamtion-block_info">for jobs</p>
-              </div>
-            </section>
-          </section>
-
-          <section class="menu__social-media social-media">
-
-            <section class="menu__social-media__links">
-              <a href="#" class="menu__social-media__item">
-                <span
-                  class="fa-brands fa-facebook-f social-media__icon social-media__icon--fb"
-                  target="_blank"
-                >
-                </span>
-              </a>
-
-              <a href="#" class="menu__social-media__item">
-                <span
-                  class="fa-brands fa-instagram social-media__icon social-media__icon--ig"
-                  target="_blank"
-                >
-                </span>
-              </a>
-
-              <a href="#" class="menu__social-media__item">
-                <span
-                  class="fa-brands fa-twitter social-media__icon social-media__icon--ig"
-                  target="_blank"
-                >
-                </span>
-              </a>
-            </section>
-          </section>
-        </nav>
-
+        <div class="underline"></div>
         <!-- <a href="#" class="scroll-up"></a> -->
       </header>
-      <div class="underline"></div>
+
+      <nav class="header__menu menu" id="menu">
+        <a href="#" class="icon menu__cross"></a>
+
+        <ul class="menu__list">
+          <li class="menu-item">
+            <a class="menu-item__link" href="#">Abous us</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item__link" href="#our-projects">Our projects</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item__link" href="#stories">Stories</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item__link" href="#stories">Join the team</a>
+          </li>
+        </ul>
+
+        <div class="theme-switcher menu__theme-switcher">
+          <div class="theme-switcher__light"></div>
+        </div>
+
+        <section class="menu__contact-us">
+          <h3 class="menu__contact-us__title">Contact us</h3>
+
+          <section class="menu__contact-us_information">
+            <div class="menu__inforamtion-block">
+              <p class="menu__inforamtion-block_title">+38( 093 ) 123-23-23</p>
+              <p class="menu__inforamtion-block_info">Mo-Fri 9:00-18:00</p>
+            </div>
+
+            <div class="menu__inforamtion-block">
+              <p class="menu__inforamtion-block_title">savetheocean@.org</p>
+              <p class="menu__inforamtion-block_info">
+                for projects and questions
+              </p>
+            </div>
+
+            <div class="menu__inforamtion-block">
+              <p class="menu__inforamtion-block_title">hrsavetheocean@.org</p>
+              <p class="menu__inforamtion-block_info">for jobs</p>
+            </div>
+          </section>
+        </section>
+
+        <section class="menu__social-media social-media">
+          <section class="menu__social-media__links">
+            <a href="#" class="menu__social-media__item">
+              <span
+                class="fa-brands fa-facebook-f social-media__icon social-media__icon--fb"
+                target="_blank"
+              >
+              </span>
+            </a>
+
+            <a href="#" class="menu__social-media__item">
+              <span
+                class="fa-brands fa-instagram social-media__icon social-media__icon--ig"
+                target="_blank"
+              >
+              </span>
+            </a>
+
+            <a href="#" class="menu__social-media__item">
+              <span
+                class="fa-brands fa-twitter social-media__icon social-media__icon--ig"
+                target="_blank"
+              >
+              </span>
+            </a>
+          </section>
+        </section>
+      </nav>
       <main class="main">
         <section class="hero">
           <section class="hero__content">
             <section class="hero__title">
               <h1 class="hero__title_black">
                 About the
-                <span class="hero__title_blue">
-                  project
-                </span>
+                <span class="hero__title_blue"> project </span>
               </h1>
             </section>
 
@@ -161,110 +163,123 @@
             <div class="underline"></div>
           </section>
 
-          <!-- <section class="hero-slider">
-            <div class="hero-slider__wrapper swiper-wrapper">
-              <div class="hero-slider__slide swiper-slide">
+          <section class="hero__slider">
+            <div class="hero__slider_wrapper">
+              <div class="hero__slider_slide hero__slider--active">
                 <img
-                  class="hero-slider__slide_picture swiper-slide__picture"
+                  class="hero__slider_slide-picture"
                   alt="slider-1"
-                  src="./images/sliders/slide_1.png"
+                  src="./images/sliders/slide_1.jpg"
                 >
               </div>
 
-              <div class="hero-slider__slide swiper-slide">
+              <div class="hero__slider_slide">
                 <img
-                  class="hero-slider__slide_picture swiper-slide__picture"
+                  class="hero__slider_slide-picture"
                   alt="slider-2"
-                  src="./images/sliders/slide_2.png"
+                  src="./images/sliders/slide_2.jpg"
                 >
               </div>
 
-              <div class="hero-slider__slide swiper-slide">
+              <div class="hero__slider_slide">
                 <img
-                  class="hero-slider__slide_picture swiper-slide__picture"
+                  class="hero__slider_slide-picture"
                   alt="slider-3"
-                  src="./images/sliders/slide_3.png"
+                  src="./images/sliders/slide_3.jpg"
                 >
               </div>
 
-              <div class="swiper-pagination"></div>
+              <div class="hero__slider_controler">
+                <a class="hero__slider_button-prev"></a>
+                <div class="hero__slider_pagination">
+                  <a class="hero__slider_pagination--fist">1</a>
 
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+                  <a class="hero__slider_pagination--last">/3</a>
+                </div>
+                <a class="hero__slider_button-next"></a>
+              </div>
             </div>
-          </section> -->
+          </section>
+
+
         </section>
 
         <section class="latest-news">
           <h2 class="latest-news__headline">Latest news</h2>
 
           <div class="latest-news__swiper swiper-container">
-            <!-- Additional required wrapper -->
             <div class="latest-news__swiper-wrapper swiper-wrapper">
-              <!-- Slides -->
-              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+              <div
+                class="latest-news__swiper-slide swiper-slide latest-news__card"
+              >
                 <img
                   class="latest-news__card_picture swiper-slide__picture"
                   alt="slider-1"
                   src="./images/last-news/last-news-1.jpg"
                 >
+                <div class="latest-news__card_content-wrapper">
+                  <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
 
-                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
-
-                <p class="latest-news__card_paragraph">
-                  The Global Youth Mentor Program gives motivated Youth Leaders
-                  the tools and support to create lasting systemic change in
-                  their communities.
-                </p>
+                  <p class="latest-news__card_paragraph text">
+                    The Global Youth Mentor Program gives motivated Youth Leaders the tools and support to create lasting systemic change in their communities.
+                  </p>
+                </div>
               </div>
-              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+
+              <div
+                class="latest-news__swiper-slide swiper-slide latest-news__card"
+              >
                 <img
                   class="latest-news__card_picture swiper-slide__picture"
                   alt="slider-2"
                   src="./images/last-news/last-news-2.jpg"
                 >
+                <div class="latest-news__card_content-wrapper">
+                  <h3 class="latest-news__card_headline">Here is the result of our last project in africa</h3>
 
-                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
-
-                <p class="latest-news__card_paragraph">
-                  The Global Youth Mentor Program gives motivated Youth Leaders
-                  the tools and support to create lasting systemic change in
-                  their communities.
-                </p>
+                  <p class="latest-news__card_paragraph">
+                    The purpose of lorem ipsum is to create a natural looking
+                    block of text (sentence, paragraph, page, etc.)
+                  </p>
+                </div>
               </div>
-              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+
+              <div
+                class="latest-news__swiper-slide swiper-slide latest-news__card"
+              >
                 <img
                   class="latest-news__card_picture swiper-slide__picture"
                   alt="slider-3"
                   src="./images/last-news/last-news-3.jpg"
                 >
+                <div class="latest-news__card_content-wrapper">
+                  <h3 class="latest-news__card_headline">Time to change something. There is no time left</h3>
 
-                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
-
-                <p class="latest-news__card_paragraph">
-                  The Global Youth Mentor Program gives motivated Youth Leaders
-                  the tools and support to create lasting systemic change in
-                  their communities.
-                </p>
+                  <p class="latest-news__card_paragraph">
+                    The purpose of lorem ipsum is to create a natural looking block
+                    of text (sentence, paragraph, page, etc.) that doesn't.
+                  </p>
+                </div>
               </div>
-              <div class="latest-news__swiper-slide swiper-slide latest-news__card">
+
+              <div
+                class="latest-news__swiper-slide swiper-slide latest-news__card"
+              >
                 <img
                   class="latest-news__card_picture swiper-slide__picture"
-                  alt="slider-1"
-                  src="./images/last-news/last-news-1.jpg"
+                  alt="slider-4"
+                  src="./images/last-news/last-news-4.jpg"
                 >
+                <div class="latest-news__card_content-wrapper">
+                  <h3 class="latest-news__card_headline">How can we change the situation withthe global warming cleaning the ocean?</h3>
 
-                <h3 class="latest-news__card_headline">WHAT IS GYM?</h3>
-
-                <p class="latest-news__card_paragraph">
-                  The Global Youth Mentor Program gives motivated Youth Leaders
-                  the tools and support to create lasting systemic change in
-                  their communities.
-                </p>
+                  <p id="content" class="latest-news__card_paragraph">
+                    The purpose of lorem ipsum is to create a natural looking block of text sentence.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="swiper-scrollbar">
-            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
         </section>
 
@@ -280,7 +295,8 @@
             class="form"
             action="#"
             method="get"
-            id="form">
+            id="form"
+          >
             <label class="form__label">
               <input
                 class="form__field form__email"
@@ -295,7 +311,6 @@
         </section>
 
         <div class="underline"></div>
-
       </main>
     </div>
 
@@ -306,9 +321,7 @@
         </a>
 
         <section class="footer__social-media social-media">
-          <h3 class="footer__headline">
-            Subscribe to our social media
-          </h3>
+          <h3 class="footer__headline">Subscribe to our social media</h3>
 
           <section class="social-media__links">
             <a href="#" class="social-media__item">
@@ -340,23 +353,27 @@
           </section>
 
           <section class="footer__contact-us">
-            <h3 class="footer__headline">
-              Do not hesitate to contact us
-            </h3>
+            <h3 class="footer__headline">Do not hesitate to contact us</h3>
 
             <section class="footer__contact-us_information">
               <div class="footer__inforamtion-block">
-                <p class="footer__inforamtion-block_title">+38( 093 ) 123-23-23</p>
+                <p class="footer__inforamtion-block_title">
+                  +38( 093 ) 123-23-23
+                </p>
                 <p class="footer__inforamtion-block_info">Mo-Fri 9:00-18:00</p>
               </div>
 
               <div class="footer__inforamtion-block">
                 <p class="footer__inforamtion-block_title">savetheocean@.org</p>
-                <p class="footer__inforamtion-block_info">for projects and questions</p>
+                <p class="footer__inforamtion-block_info">
+                  for projects and questions
+                </p>
               </div>
 
               <div class="footer__inforamtion-block">
-                <p class="footer__inforamtion-block_title">hrsavetheocean@.org</p>
+                <p class="footer__inforamtion-block_title">
+                  hrsavetheocean@.org
+                </p>
                 <p class="footer__inforamtion-block_info">for jobs</p>
               </div>
             </section>
@@ -367,3 +384,4 @@
     </footer>
   </body>
 </html>
+
