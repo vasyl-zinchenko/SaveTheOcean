@@ -37,7 +37,7 @@ export const lastNewsSwiper = new Swiper('.latest-news__swiper', {
     },
 
     768: {
-      slidesPerView: 3.01,
+      slidesPerView: 3,
       spaceBetween: 16,
     },
 
@@ -49,7 +49,7 @@ export const lastNewsSwiper = new Swiper('.latest-news__swiper', {
       slidesPerView: 4,
       spaceBetween: 24,
     },
-    1696: {
+    1440: {
       slidesPerView: 4,
       spaceBetween: 32,
     },

@@ -26,12 +26,11 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 16px;
-    line-height: 22px;
-    font-family: "Syncopate";
-    font-weight: 700;
+    @include fontSizeLineHeight(16px, 22px);
+    font-family: $fontFamilySyncopate;
+    font-weight: $fontWeight700;
     height: 48px;
-    color: #101010;
+    color:  $colorOnyx;
     transition-duration: 0.5s;
 
     @include onTablet {

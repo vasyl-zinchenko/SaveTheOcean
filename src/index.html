@@ -11,13 +11,14 @@
     >
     <link rel="stylesheet" href="./styles/main.scss" >
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/set-line-clamp.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     >
   </head>
 
-  <body>
+  <body class="page">
     <div class="page__body">
       <header class="header">
         <div class="header__content">
@@ -26,33 +27,40 @@
               save<span class="logo_blue">the</span>ocean
             </a>
 
-            <div class="theme-switcher header__theme-swithcer">
-              <div class="switcher theme-switcher__light"></div>
-            </div>
+            <section class="header__functional">
+              <div class="header__inforamtion-block">
+                <a href="tel+38 093 123 23 23" class="header__inforamtion-block_title">+38( 093 ) 123-23-23</a>
+                <p class="header__inforamtion-block_info">Mo-Fri 9:00-18:00</p>
+              </div>
 
-            <div class="header__icons">
-              <a href="#menu" class="icon header__menu-opener">
-                <svg
-                width="24"
-                height="14"
-                viewBox="0 0 24 14"
-                fill="#101010"
-              >
-                  <path
-                    d="M0 14H24V11.6667H0V14ZM0 8.16667H24V5.83333H0V8.16667ZM0 0V2.33333H24V0H0Z"
-                    fill="white"
-                  >
-                    <use href="#menu"></use>
-                </svg>
-              </a>
-            </div>
+              <div class="header__switcher theme-switcher header__theme-swithcer">
+                <div class="switcher theme-switcher__light"></div>
+              </div>
+
+              <div class="header__icons">
+                <a href="#menu" class="icon header__menu-opener">
+                  <svg
+                  width="24"
+                  height="14"
+                  viewBox="0 0 24 14"
+                  fill="#101010"
+                >
+                    <path
+                      d="M0 14H24V11.6667H0V14ZM0 8.16667H24V5.83333H0V8.16667ZM0 0V2.33333H24V0H0Z"
+                      fill="white"
+                    >
+                      <use href="#menu"></use>
+                  </svg>
+                </a>
+              </div>
+            </section>
           </div>
         </div>
         <div class="underline"></div>
         <!-- <a href="#" class="scroll-up"></a> -->
       </header>
 
-      <nav class="header__menu menu" id="menu">
+      <nav class="page__menu menu" id="menu">
         <a href="#" class="icon menu__cross">
           <svg
             idth="16"
@@ -70,7 +78,7 @@
 
         <ul class="menu__list">
           <li class="menu-item">
-            <a class="menu-item__link" href="#">Abous us</a>
+            <a class="menu-item__link" href="#">About us</a>
           </li>
 
           <li class="menu-item">
@@ -86,8 +94,8 @@
           </li>
         </ul>
 
-        <div class="theme-switcher menu__theme-switcher">
-          <div class="theme-switcher__light"></div>
+        <div class="menu__switcher theme-switcher header__theme-swithcer">
+          <div class="switcher theme-switcher__light"></div>
         </div>
 
         <section class="menu__contact-us">
@@ -95,19 +103,19 @@
 
           <section class="menu__contact-us_information">
             <div class="menu__inforamtion-block">
-              <p class="menu__inforamtion-block_title">+38( 093 ) 123-23-23</p>
+              <a href="tel+38 093 123 23 23" class="menu__inforamtion-block_title">+38( 093 ) 123-23-23</a>
               <p class="menu__inforamtion-block_info">Mo-Fri 9:00-18:00</p>
             </div>
 
             <div class="menu__inforamtion-block">
-              <p class="menu__inforamtion-block_title">savetheocean@.org</p>
+              <a href="mailto:savetheocean@.org" class="menu__inforamtion-block_title">savetheocean@.org</a>
               <p class="menu__inforamtion-block_info">
                 for projects and questions
               </p>
             </div>
 
             <div class="menu__inforamtion-block">
-              <p class="menu__inforamtion-block_title">hrsavetheocean@.org</p>
+              <a href="mailto:hrsavetheocean@.org" class="menu__inforamtion-block_title">hrsavetheocean@.org</a>
               <p class="menu__inforamtion-block_info">for jobs</p>
             </div>
           </section>
@@ -177,11 +185,18 @@
               </h1>
             </section>
 
-            <div class="underline"></div>
+            <div class="underline underline__main-headline"></div>
 
-            <h2 class="hero__headline">a nice place for powerful slogan</h2>
+            <h2 class="hero__headline hero__headline--active">a nice place for powerful slogan</h2>
 
-            <div class="underline"></div>
+            <p class="hero__paragraph hero__paragraph--active">
+              The purpose of lorem ipsum is to create a natural looking block of
+              text that doesn't distract from the layout. A practice not without
+              controversy, laying out pages with meaningless filler text can be
+              very useful when the focus is meant to be on design, not content.
+            </p>
+
+            <h2 class="hero__headline" id="our-projects">Our projects</h2>
 
             <p class="hero__paragraph">
               The purpose of lorem ipsum is to create a natural looking block of
@@ -190,15 +205,16 @@
               very useful when the focus is meant to be on design, not content.
             </p>
 
-            <div class="underline"></div>
-
-            <h2 class="hero__headline" id="our-projects">Our projects</h2>
-
-            <div class="underline"></div>
-
             <h2 class="hero__headline" id="stories">Our stories</h2>
 
-            <div class="underline"></div>
+            <p class="hero__paragraph">
+              The purpose of lorem ipsum is to create a natural looking block of
+              text that doesn't distract from the layout. A practice not without
+              controversy, laying out pages with meaningless filler text can be
+              very useful when the focus is meant to be on design, not content.
+            </p>
+
+            <!-- <div class="underline"></div> -->
           </section>
 
           <section class="hero__slider">
@@ -311,7 +327,7 @@
                 <div class="latest-news__card_content-wrapper">
                   <h3 class="latest-news__card_headline">How can we change the situation withthe global warming cleaning the ocean?</h3>
 
-                  <p id="content" class="latest-news__card_paragraph">
+                  <p class="latest-news__card_paragraph">
                     The purpose of lorem ipsum is to create a natural looking block of text sentence.
                   </p>
                 </div>
@@ -402,23 +418,21 @@
 
           <section class="footer__contact-us_information">
             <div class="footer__inforamtion-block">
-              <p class="footer__inforamtion-block_title">
-                +38( 093 ) 123-23-23
-              </p>
+              <a href="tel:+38 093 123 23 23" class="footer__inforamtion-block_title">+38( 093 ) 123-23-23</a>
               <p class="footer__inforamtion-block_info">Mo-Fri 9:00-18:00</p>
             </div>
 
             <div class="footer__inforamtion-block">
-              <p class="footer__inforamtion-block_title">savetheocean@.org</p>
+              <a href="mailto:savetheocean@.org" class="footer__inforamtion-block_title">savetheocean@.org</a>
               <p class="footer__inforamtion-block_info">
                 for projects and questions
               </p>
             </div>
 
             <div class="footer__inforamtion-block">
-              <p class="footer__inforamtion-block_title">
+              <a href="mailto:hrsavetheocean@.org" class="footer__inforamtion-block_title">
                 hrsavetheocean@.org
-              </p>
+              </a>
               <p class="footer__inforamtion-block_info">for jobs</p>
             </div>
           </section>

@@ -4,7 +4,7 @@ const newsCardText = document.getElementsByClassName(
 );
 
 function getCountOfLine(element) {
-  return Math.round(element.offsetHeight / 20);
+  return Math.round(element.offsetHeight / 10);
 }
 
 function setLineClapm(element, count) {
@@ -20,7 +20,7 @@ for (let i = 0; i < headers.length; i++) {
   }
 
   if (getCountOfLine(headers[i]) === 2) {
-    setLineClapm(newsCardText[i], 4);
+    setLineClapm(newsCardText[i], 6);
   }
 
   if (getCountOfLine(headers[i]) === 3) {
@@ -28,11 +28,11 @@ for (let i = 0; i < headers.length; i++) {
   }
 
   if (getCountOfLine(headers[i]) === 4) {
-    setLineClapm(newsCardText[i], 2);
+    setLineClapm(newsCardText[i], 4);
   }
 
   if (getCountOfLine(headers[i]) === 5) {
-    setLineClapm(newsCardText[i], 2);
+    setLineClapm(newsCardText[i], 3);
   }
 
   if (getCountOfLine(headers[i]) === 6) {

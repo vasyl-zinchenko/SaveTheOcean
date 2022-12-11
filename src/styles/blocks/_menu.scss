@@ -1,33 +1,40 @@
 .menu {
   position: fixed;
   flex-direction: column;
-  font-family: "Syncopate";
+  font-family: $fontFamilySyncopate;
   height: 100vh;
   top: 0;
   right: 0;
   z-index: 7;
-  background: white;
+  background: $mainWhite;
   transform: translateX(120%);
   transition: transform 0.5s ease;
   overflow: auto;
 
   &--dark {
-    background: #101010;
+    background:  $colorOnyx;
   }
 
   &:target {
     transform: translateX(0);
   }
 
+  &__switcher {
+    margin-bottom: 20px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
   &__contact-us {
     margin: 0;
 
     &__title {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 21px;
+      font-weight: $fontWeight700;
+      @include fontSizeLineHeight(20px, 21px);
       text-transform: uppercase;
-      color: #101010;
+      color:  $colorOnyx;
 
       @include onTablet {
         font-size: 32px;
@@ -53,15 +60,14 @@
     gap: 11px;
 
     &_title {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 15px;
-      color: #101010;
+      font-weight: $fontWeight700;
+      @include fontSizeLineHeight(14px, 15px);
+      color:  $colorOnyx;
       transition: text-shadow .3s;
       cursor: pointer;
 
       &:hover {
-        text-shadow: -4px 2px #24a9f4;
+        text-shadow: -4px 2px $ButterflyBlue;
       }
 
       @include onTablet {
@@ -70,8 +76,7 @@
     }
 
     &_info {
-      font-size: 12px;
-      line-height: 12px;
+      @include fontSizeLineHeight(12px, 12px);
       color: #bebebe;
 
       @include onTablet {
@@ -102,7 +107,7 @@
 
     &--dark {
       & > svg > path {
-        fill: white;
+        fill: $mainWhite;
       }
     }
   }
@@ -114,7 +119,6 @@
     z-index: 4;
     top: 0;
 
-    background-color: $bgrColor;
     box-shadow: 2px 16px 19px -14px rgba(0, 0, 0, 0.29);
     overflow: hidden;
   }
@@ -139,12 +143,11 @@
     @include onLaptop {
       gap: 48px;
       padding-top: 51px;
-
     }
   }
 
   &__social-media__links {
-    margin-bottom: 38px;
+    margin: 38px 0;
     display: flex;
     gap: 32px;
 
@@ -154,8 +157,7 @@
   }
 
   &__social-media__item {
-    width: 32px;
-    height: 32px;
+    @include square(32px);
     left: 108px;
     top: 745px;
     text-decoration: none;
@@ -165,29 +167,22 @@
 
   &-item {
     &__link {
-      font-family: "Syncopate";
+      font-family: $fontFamilySyncopate;
       font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 21px;
+      font-weight: $fontWeight700;
+      @include fontSizeLineHeight(20px, 21px);
       text-transform: uppercase;
       text-decoration: none;
-      color: #101010;
+      color:  $colorOnyx;
       transition: text-shadow .3s;
 
       &:hover {
-        text-shadow: -4px 2px #24a9f4;
+        text-shadow: -4px 2px $ButterflyBlue;
       }
 
       @include onTablet {
         font-size: 32px;
       }
-    }
-  }
-
-  &__theme-switcher {
-    @include onTablet {
-      display: none;
     }
   }
 }

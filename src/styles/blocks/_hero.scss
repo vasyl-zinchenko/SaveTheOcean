@@ -26,7 +26,7 @@
   }
 
   &__title {
-    font-family: "Syncopate", sans-serif;
+    font-family: $fontFamilySyncopate;
     text-transform: uppercase;
     text-align: center;
 
@@ -36,11 +36,11 @@
 
     &_black {
       font-size: 42px;
-      color: #101010;
+      color:  $colorOnyx;
       transition-duration: 0.5s;
 
       &--white {
-        color: white;
+        color: $mainWhite;
       }
 
       @include onTablet {
@@ -62,13 +62,13 @@
 
     &_blue {
       font-size: 53px;
-      color: white;
-      border: #24a9f4;
-      -webkit-text-stroke: 1px #24a9f4;
+      color: $mainWhite;
+      border: $ButterflyBlue;
+      -webkit-text-stroke: 1px $ButterflyBlue;
       transition-duration: 0.5s;
 
       &--black {
-        color: #101010;
+        color:  $colorOnyx;
       }
 
       @include onTablet {
@@ -81,7 +81,7 @@
 
       @include onLaptopL {
         font-size: 47px;
-        -webkit-text-stroke: 1.5px #24a9f4;
+        -webkit-text-stroke: 1.5px $ButterflyBlue;
       }
 
       @include onDesktop {
@@ -91,35 +91,80 @@
   }
 
   &__headline {
-    font-family: "Syncopate", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $fontFamilySyncopate;
+    font-weight: $fontWeight700;
+    @include fontSizeLineHeight(14px, 15px);
     text-transform: uppercase;
-    color: #101010;
+    color:  $colorOnyx;
+    padding: 16px 0;
+    border-bottom: 1px solid $colorOnyx;
+    cursor: pointer;
+    transition-duration: .3s;
+
+    &--active::after {
+      content: url(/images/arrow-hero.svg);
+      transform: rotate(90deg);
+    }
 
     @include onLaptopL {
-      font-size: 16px;
-      line-height: 17px;
-      padding: 4px 0;
+      @include fontSizeLineHeight(16px, 17px);
+      padding: 20px 0;
     }
 
     @include onDesktop {
-      font-size: 15px;
-      line-height: 16px;
+      @include fontSizeLineHeight(15px, 16px);
       padding: 13px 0;
+    }
+
+    &::after {
+      content: url(/images/arrow-hero.svg);
+      height: 12px;
+      width: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+      content: url(/images/arrow-hero-blue.svg);
+    }
+
+    &--night {
+      color: $mainWhite;
+      border-bottom: 1px solid $mainWhite;
+
+      &::after {
+        content: url(/images/arrow-hero-white.svg);
+    }
+
+      &:hover {
+        color: $ButterflyBlue;
+      }
     }
   }
 
   &__paragraph {
-    font-family: "KyivType Sans", sans-serif;
-    font-size: 14px;
-    line-height: 22px;
-    color: #101010;
+    display: none;
+    font-family: $fontFamilyKyivType;
+    @include fontSizeLineHeight(14px, 22px);
+    color: $colorOnyx;
+    border-bottom: 1px solid;
+    padding: 16px 0;
+
+    &--active {
+      display: block;
+      opacity: 1;
+      animation: showContent 0.5s linear;
+    }
+
+    &--night {
+      color: $mainWhite;
+    }
 
     @include onLaptopL {
-      font-size: 16px;
-      line-height: 24px;
+      @include fontSizeLineHeight(16px, 24px);
     }
 
     @include onDesktop {
@@ -131,8 +176,7 @@
         meant to be on design, not content
         ";
       }
-      font-size: 16px;
-      line-height: 24px;
+      @include fontSizeLineHeight(16px, 24px);
     }
   }
 
@@ -144,8 +188,8 @@
 
     @include onLaptop {
       margin: 0;
-      height: auto;
-      width: 100%;
+      @include size(auto, 100%);
+
     }
 
     &_slide {
@@ -159,13 +203,7 @@
         width: inherit;
 
         @include onLaptop {
-          height: 498px;
-          width: 100%;
-        }
-
-        @include onLaptopL {
-          height: 505px;
-          width: 100%;
+          @include size(498px, 100%);
         }
 
         @include onDesktop {
@@ -184,13 +222,12 @@
     &_pagination {
       display: flex;
       align-items: baseline;
-      font-family: "Syncopate";
-      font-size: 18px;
-      line-height: 19px;
-      color: #ffffff;
+      font-family: $fontFamilySyncopate;
+      @include fontSizeLineHeight(18px, 19px);
+      color: $mainWhite;
 
       &--fist {
-        font-weight: 700;
+        font-weight: $fontWeight700;
       }
     }
 
@@ -200,8 +237,7 @@
         content: "";
         display: block;
         cursor: pointer;
-        width: 24px;
-        height: 20.94px;
+        @include size(20.94px, 24px);
         transition: 0.2s;
         background-image: url(/images/array-left.svg);
         background-size: contain;
@@ -211,8 +247,7 @@
         content: "";
         background-image: url(/images/array-left-hover.png);
         background-size: contain;
-        width: 24px;
-        height: 20.94px;
+        @include size(20.94px, 24px);
       }
     }
 
@@ -221,8 +256,7 @@
         content: "";
         display: block;
         cursor: pointer;
-        width: 24px;
-        height: 20.94px;
+        @include size(20.94px, 24px);
         background-image: url(/images/array-right.svg);
 
         transition: 0.2s;
@@ -241,7 +275,7 @@
   }
 }
 
-@keyframes showSlider {
+@keyframes showContent {
   0% {
     opacity: 0.5;
   }
@@ -249,3 +283,15 @@
     opacity: 1;
   }
 }
+
+@keyframes showContent {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+

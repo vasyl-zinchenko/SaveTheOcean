@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import './prevent-submit';
-import './latest-news-slider';
+import './prevent-submit.js';
+import './latest-news-slider.js';
 import './them-switcher.js';
 import './change-blur.js';
-import './set-line-clamp';
-import './hero-slider';
+import './set-line-clamp.js';
+import './hero-slider.js';
+import './show-contant.js';
 // import * as scrollUpArrow from './scroll-up';
 // import * as activeLink from './active-menu-link';
 

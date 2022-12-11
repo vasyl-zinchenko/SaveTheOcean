@@ -9,12 +9,11 @@
   }
 
   &__headline {
-    font-family: "Syncopate", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 25px;
+    font-family: $fontFamilySyncopate;
+    font-weight: $fontWeight700;
+    @include fontSizeLineHeight(24px, 25px);
     text-transform: uppercase;
-    color: #101010;
+    color:  $colorOnyx;
     margin-bottom: 24px;
 
     @include onTablet {
@@ -30,14 +29,12 @@
     cursor: pointer;
 
     &:hover {
-      box-shadow: -6px 6px #24a9f4, -6px 6px 0px 1px #101010;
+      box-shadow: -6px 6px $ButterflyBlue, -6px 6px 0px 1px  $colorOnyx;
     }
 
     &--night:hover {
-      box-shadow: -6px 6px #24a9f4, -6px 6px 0px 1px white;
+      box-shadow: -6px 6px $ButterflyBlue, -6px 6px 0px 1px $mainWhite;
     }
-
-
 
     &_content-wrapper {
       text-align: initial;
@@ -49,20 +46,26 @@
         margin: 10px 16px 25px 16px;
       }
 
-      @include onDesktop {
+      @include onLaptop {
+        margin: 10px 13px 25px 13px;
+      }
+
+      @include onLaptopL {
         height: 170px;
+      }
+
+      @include onDesktop {
         margin: 16px 24px 25px 24px;
       }
     }
 
     &_headline {
       margin-bottom: 4px;
-      font-family: "Syncopate", sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 20px;
+      font-family: $fontFamilySyncopate;
+      font-weight: $fontWeight700;
+      @include fontSizeLineHeight(16px, 20px);
       text-transform: uppercase;
-      color: #101010;
+      color:  $colorOnyx;
 
       @include onTablet {
         font-size: 14px;
@@ -70,18 +73,16 @@
 
       @include onLaptopL {
         font-size: 16px;
-        line-height: 20px;
+        @include fontSizeLineHeight(16px, 20px);
       }
     }
 
     &_paragraph {
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      font-family: "KyivType Sans";
-      font-size: 16px;
-      line-height: 24px;
-      color: #101010;
-      display: block;
+      font-family: $fontFamilyKyivType;
+      @include fontSizeLineHeight(16px, 24px);
+      color: $colorOnyx;
       overflow: hidden;
 
       @include onLaptop {
@@ -89,8 +90,7 @@
       }
 
       @include onLaptopL {
-        font-size: 16px;
-        line-height: 24px;
+        @include fontSizeLineHeight(16px, 24px);
       }
     }
   }

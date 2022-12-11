@@ -1,21 +1,35 @@
-body {
-  transition-duration: 0.3s;
-}
-
 .page {
+  transition-duration: 0.3s;
   scroll-behavior: smooth;
+
+  &__menu {
+    min-width: 280px;
+    padding: 0 0 38px 32px;
+
+    @include onTablet {
+      padding: 0 40px 38px 50px;
+    }
+
+    @include onLaptop {
+      padding: 0 51px 38px 33px;
+    }
+
+    @include onDesktop {
+      padding: 0 51px 38px 56px;
+    }
+  }
 
   &__body {
     padding: 0 24px;
-    background: white;
+    background: $mainWhite;
     overflow-x: hidden;
     max-width: 1696px;
     margin: auto;
     transition-duration: 0.3s;
 
     &--black {
-      background: #101010;
-      color: white;
+      background: $colorOnyx;
+      color: $mainWhite;
     }
 
     &--with-menu {

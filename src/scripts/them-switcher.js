@@ -9,8 +9,8 @@ const heroTitleBlack = document.querySelector('.hero__title_black');
 const heroTitleBlue = document.querySelector('.hero__title_blue');
 const body = document.getElementsByTagName('body')[0];
 
-const switcher = document.querySelector('.switcher');
-const heroParagrah = document.querySelector('.hero__paragraph');
+const switcher = document.querySelectorAll('.switcher');
+const heroParagrah = document.querySelectorAll('.hero__paragraph');
 const heroHeadline = document.querySelectorAll('.hero__headline');
 const underline = document.querySelectorAll('.underline');
 const latestNewsCardHeadline = document.querySelectorAll(
@@ -28,6 +28,10 @@ const menuItemLink = document.querySelectorAll('.menu-item__link');
 const menuContactUsTitle = document.querySelector('.menu__contact-us__title');
 const menuInforamtionBlockTitle = document.querySelectorAll(
   '.menu__inforamtion-block_title'
+);
+
+const headerInforamtionBlockTitle = document.querySelector(
+  '.header__inforamtion-block_title'
 );
 const iconSocialNav = document.querySelectorAll('.icon__social-nav');
 
@@ -49,18 +53,22 @@ function removeBackgroundWhite(...elements) {
   elements.map((element) => (element.removeAttribute('style')));
 }
 
-switcher.addEventListener('click', function() {
+[...switcher].map((
+  commutator
+) => commutator.addEventListener('click', function() {
   isDark = !isDark;
 
   if (isDark) {
-    switcher.classList.add('theme-switcher__dark');
+    [...switcher].map((el) => el.classList.add('theme-switcher__dark'));
+    [...switcher].map((el) => el.classList.remove('theme-switcher__light'));
+    [...iconSocialNav].map((el) => el.classList.add('icon__social-nav--dark'));
+    [...heroParagrah].map((el) => el.classList.add('hero__paragraph--night'));
+    [...heroHeadline].map((el) => el.classList.add('hero__headline--night'));
     buttonForm.classList.add('button__form--blue');
-    switcher.classList.remove('theme-switcher__light');
     footer.classList.add('footer--dark-theme');
     footerBottom.classList.add('footer__bottom--dark-theme');
     menu.classList.add('menu--dark');
     scrollbarDrag.classList.add('swiper-scrollbar--night');
-    [...iconSocialNav].map((el) => el.classList.add('icon__social-nav--dark'));
     menuOpener.classList.add('header__menu-opener--dark');
     menuCross.classList.add('menu__cross--dark');
 
@@ -82,19 +90,25 @@ switcher.addEventListener('click', function() {
     changeColorToWhite(
       logo,
       heroTitleBlack,
-      heroParagrah,
-      ...heroHeadline,
       latestNewsHeadline,
+      notificationHeadline,
+      menuContactUsTitle,
+      headerInforamtionBlockTitle,
       ...latestNewsCardHeadline,
       ...latestNewsCardParagraph,
-      notificationHeadline,
       ...menuItemLink,
-      menuContactUsTitle,
       ...menuInforamtionBlockTitle,
     );
   } else {
-    switcher.classList.add('theme-switcher__light');
-    switcher.classList.remove('theme-switcher__dark');
+    [...switcher].map((el) => el.classList.add('theme-switcher__light'));
+    [...switcher].map((el) => el.classList.remove('theme-switcher__dark'));
+
+    [...heroParagrah].map(
+      (el) => el.classList.remove('hero__paragraph--night')
+    );
+
+    [...heroHeadline].map((el) => el.classList.remove('hero__headline--night'));
+
     buttonForm.classList.remove('button__form--blue');
     footer.classList.remove('footer--dark-theme');
     footerBottom.classList.remove('footer__bottom--dark-theme');
@@ -127,15 +141,14 @@ switcher.addEventListener('click', function() {
     removeWhiteColor(
       logo,
       heroTitleBlack,
-      heroParagrah,
-      ...heroHeadline,
       latestNewsHeadline,
+      notificationHeadline,
+      menuContactUsTitle,
+      headerInforamtionBlockTitle,
       ...latestNewsCardHeadline,
       ...latestNewsCardParagraph,
-      notificationHeadline,
       ...menuItemLink,
-      menuContactUsTitle,
       ...menuInforamtionBlockTitle,
     );
   }
-});
+}));

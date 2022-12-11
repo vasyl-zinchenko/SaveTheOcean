@@ -1,6 +1,6 @@
 .footer {
   font-family: "Syncopate";
-  background: #101010;
+  background:  $colorOnyx;
   transition-duration: 0.5s;
 
   &--dark-theme {
@@ -35,26 +35,24 @@
 
   &__social-media_item {
     padding-left: 24%;
-    background-color: white;
+    background-color: $mainWhite;
 
     @include onTablet {
       padding: 0 16px;
     }
 
     &:hover {
-      background-color:#24a9f4;
+      background-color:$ButterflyBlue;
     }
   }
 
   &__logo {
-    font-size: 24px;
-    line-height: 25px;
-    color: #ffffff;
+    @include fontSizeLineHeight(24px, 25px);
+    color: $mainWhite;
     margin-bottom: 45px;
 
     @include onTablet {
-      font-size: 36px;
-      line-height: 37px;
+      @include fontSizeLineHeight(36px, 37px);
     }
 
     @include onDesktop {
@@ -64,16 +62,13 @@
 
   &__headline {
     margin: 47px 0 24px;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 33px;
+    font-weight: $fontWeight700;
+    @include fontSizeLineHeight(32px, 33px);
     text-transform: uppercase;
-    color: #ffffff;
+    color: $mainWhite;
 
     @include onTablet {
-      font-size: 24px;
-      line-height: 25px;
-      font-weight: 600;
+      @include fontSizeLineHeight(24px, 25px);
     }
 
     @include onLaptop {
@@ -103,10 +98,9 @@
     gap: 11px;
 
     &_title {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 19px;
-      color: #ffffff;
+      font-weight: $fontWeight700;
+      @include fontSizeLineHeight(18px, 19px);
+      color: $mainWhite;
 
       @include onLaptop {
         font-size: 16px;
@@ -114,8 +108,7 @@
     }
 
     &_info {
-      font-size: 13px;
-      line-height: 14px;
+      @include fontSizeLineHeight(13px, 14px);
       color: #bebebe;
     }
   }

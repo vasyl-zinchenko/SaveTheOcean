@@ -1,36 +1,39 @@
 .header {
   position: relative;
 
-  &__menu {
-    padding: 0 0 38px 32px;
+  &__functional {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+  }
+
+  &__switcher {
+    display: none;
 
     @include onTablet {
-      padding: 0 40px 38px 50px;
+      display: block;
     }
+  }
 
-    @include onLaptop {
-      padding: 0 51px 38px 33px;
-    }
+  &__icons {
 
-    @include onDesktop {
-      padding: 0 51px 38px 56px;
+    @include onTablet {
+      margin-left: auto;
     }
   }
 
   &__logo {
-    font-family: 'Syncopate';
-    font-size: 20px;
-    line-height: 21px;
-    color: #101010;
+    font-family: $fontFamilySyncopate;
+    @include fontSizeLineHeight(20px, 21px);
+    color:  $colorOnyx;
     transition-duration: 0.5s;
 
     &--white {
-      color: white;
+      color: $mainWhite;
     }
 
     @include onTablet {
-      font-size: 36px;
-      line-height: 37px;
+      @include fontSizeLineHeight(36px, 37px);
     }
   }
 
@@ -40,8 +43,12 @@
     padding: 39px 0 8px 0;
 
     @include onTablet {
-      display: grid;
-      grid-template-columns: 78% 5% 5.7%;
+      display: flex;
+    }
+
+    @include onLaptop {
+      display: flex;
+      gap: 175px;
     }
   }
 
@@ -49,11 +56,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    @include square(40px);
     text-decoration: none;
-    color: white;
-    background-color: #101010;
+    color: $mainWhite;
+    background-color:  $colorOnyx;
     transition-duration: 0.3s;
 
     &:hover {
@@ -62,19 +68,35 @@
     }
 
     &--dark {
-      background-color: white;
+      background-color: $mainWhite;
 
       & > svg > path {
-        fill: #101010;
+        fill:  $colorOnyx;
       }
     }
   }
 
-  &__theme-swithcer {
+  &__inforamtion-block {
     display: none;
+    flex-direction: column;
+    font-family: $fontFamilySyncopate;
+    gap: 11px;
 
-    @include onTablet {
-      display: block;
+    &_title {
+      text-decoration: none;
+      @include fontSizeLineHeight(16px, 17px);
+      color:  $colorOnyx;
+      transition: text-shadow .3s;
+      cursor: pointer;
+    }
+
+    &_info {
+      @include fontSizeLineHeight(13px, 14px);
+      color: #bebebe;
+    }
+
+    @include onLaptop {
+      display: flex;
     }
   }
 }

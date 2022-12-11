@@ -6,7 +6,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  border: 1px solid #101010;
+  border: 1px solid  $colorOnyx;
   margin-bottom: 50px;
   flex-direction: column;
   -webkit-box-pack: center;
@@ -26,8 +26,7 @@
 
 .swiper-slide__picture {
   display: block;
-  width: 100%;
-  height: 100%;
+  @include square(100%);
   object-fit: cover;
 }
 
@@ -40,7 +39,7 @@
 }
 
 .swiper-scrollbar-drag {
-  background: #101010;
-  border: 1px solid white;
+  background:  $colorOnyx;
+  border: 1px solid $mainWhite;
   box-sizing: border-box;
 }

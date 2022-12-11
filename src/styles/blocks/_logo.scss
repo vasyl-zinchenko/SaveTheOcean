@@ -1,10 +1,10 @@
 .logo {
   text-decoration: none;
-  font-family: "Syncopate", sans-serif;
+  font-family: $fontFamilySyncopate;
 
   &_blue {
-    color: #24a9f4;
-    font-weight: 700;
+    color: $ButterflyBlue;
+    font-weight: $fontWeight700;
   }
 
   @include onLaptopL {

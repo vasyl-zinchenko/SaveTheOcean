@@ -39,9 +39,8 @@
     width: 100%;
     padding: 12px 20px;
 
-    font-family: 'KyivType Sans';
-    font-size: 0.88rem;
-    line-height: 24px;
+    font-family: $fontFamilyKyivType;
+    @include fontSizeLineHeight(18px, 24px);
     border: 1px solid #c6c6c6;
     outline: none;
 
@@ -50,14 +49,13 @@
     }
 
     &::placeholder {
-      font-family: 'KyivType Sans';
-      font-size: 16px;
-      line-height: 22px;
-      color: #101010;
+      font-family: $fontFamilyKyivType;
+      @include fontSizeLineHeight(16px, 22px);
+      color: $colorOnyx;
     }
 
     &:valid {
-      font-size: 1rem;
+      font-size: 18px;
       border: 1px solid $colorSuccessGreen;
       color: $colorSurfieGreen;
     }

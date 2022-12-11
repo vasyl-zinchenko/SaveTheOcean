@@ -1,13 +1,17 @@
 .underline {
   height: 1px;
-  background-color: #101010;
+  background-color: $colorOnyx;
   margin: 16px 0;
 
   &--white {
-    background-color: white;
+    background-color: $mainWhite;
   }
 
   &__last {
     margin-bottom: 100px;
+  }
+
+  &__main-headline {
+    margin-bottom: 0;
   }
 }
