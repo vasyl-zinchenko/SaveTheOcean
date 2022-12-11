@@ -3,6 +3,8 @@ const mainSection = document.querySelector('.main');
 const menuOpener = document.querySelector('.header__menu-opener');
 const menuCross = document.querySelector('.menu__cross');
 const footer = document.querySelector('.footer');
+const menuItemLink = document.querySelectorAll('.menu-item__link');
+
 let isBlur = false;
 
 function changeBlur(...arg) {
@@ -23,4 +25,11 @@ menuOpener.addEventListener('click', function() {
 menuCross.addEventListener('click', function() {
   isBlur = false;
   changeBlur(header, mainSection, footer);
+});
+
+[...menuItemLink].map((link) => {
+  return link.addEventListener('click', function() {
+    isBlur = false;
+    changeBlur(header, mainSection, footer);
+  });
 });

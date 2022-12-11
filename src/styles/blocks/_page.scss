@@ -14,6 +14,11 @@
       padding: 0 51px 38px 33px;
     }
 
+    @include onLaptopL {
+      padding: 0 0 38px 33px;
+      min-width: 487px;
+    }
+
     @include onDesktop {
       padding: 0 51px 38px 56px;
     }

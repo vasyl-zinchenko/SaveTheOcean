@@ -12,7 +12,7 @@
   overflow: auto;
 
   &--dark {
-    background:  $colorOnyx;
+    background: $colorOnyx;
   }
 
   &:target {
@@ -34,11 +34,16 @@
       font-weight: $fontWeight700;
       @include fontSizeLineHeight(20px, 21px);
       text-transform: uppercase;
-      color:  $colorOnyx;
+      color: $colorOnyx;
 
       @include onTablet {
         font-size: 32px;
         margin-bottom: 21px;
+      }
+
+      @include onLaptopL {
+        font-size: 36px;
+        margin-bottom: 31px;
       }
     }
   }
@@ -62,8 +67,8 @@
     &_title {
       font-weight: $fontWeight700;
       @include fontSizeLineHeight(14px, 15px);
-      color:  $colorOnyx;
-      transition: text-shadow .3s;
+      color: $colorOnyx;
+      transition: text-shadow 0.3s;
       cursor: pointer;
 
       &:hover {
@@ -173,8 +178,8 @@
       @include fontSizeLineHeight(20px, 21px);
       text-transform: uppercase;
       text-decoration: none;
-      color:  $colorOnyx;
-      transition: text-shadow .3s;
+      color: $colorOnyx;
+      transition: text-shadow 0.3s;
 
       &:hover {
         text-shadow: -4px 2px $ButterflyBlue;
@@ -182,6 +187,10 @@
 
       @include onTablet {
         font-size: 32px;
+      }
+
+      @include onLaptopL {
+        font-size: 36px;
       }
     }
   }

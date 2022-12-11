@@ -16,7 +16,6 @@
   }
 
   &__icons {
-
     @include onTablet {
       margin-left: auto;
     }
@@ -25,7 +24,7 @@
   &__logo {
     font-family: $fontFamilySyncopate;
     @include fontSizeLineHeight(20px, 21px);
-    color:  $colorOnyx;
+    color: $colorOnyx;
     transition-duration: 0.5s;
 
     &--white {
@@ -59,7 +58,7 @@
     @include square(40px);
     text-decoration: none;
     color: $mainWhite;
-    background-color:  $colorOnyx;
+    background-color: $colorOnyx;
     transition-duration: 0.3s;
 
     &:hover {
@@ -71,7 +70,7 @@
       background-color: $mainWhite;
 
       & > svg > path {
-        fill:  $colorOnyx;
+        fill: $colorOnyx;
       }
     }
   }
@@ -85,8 +84,8 @@
     &_title {
       text-decoration: none;
       @include fontSizeLineHeight(16px, 17px);
-      color:  $colorOnyx;
-      transition: text-shadow .3s;
+      color: $colorOnyx;
+      transition: text-shadow 0.3s;
       cursor: pointer;
     }
 

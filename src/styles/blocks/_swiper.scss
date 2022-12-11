@@ -6,7 +6,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  border: 1px solid  $colorOnyx;
+  border: 1px solid $colorOnyx;
   margin-bottom: 50px;
   flex-direction: column;
   -webkit-box-pack: center;
@@ -30,7 +30,7 @@
   object-fit: cover;
 }
 
-.swiper-scrollbar{
+.swiper-scrollbar {
   margin-top: 50px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .swiper-scrollbar-drag {
-  background:  $colorOnyx;
+  background: $colorOnyx;
   border: 1px solid $mainWhite;
   box-sizing: border-box;
 }

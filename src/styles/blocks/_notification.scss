@@ -11,7 +11,7 @@
     @include fontSizeLineHeight(24px, 25px);
     text-align: center;
     text-transform: uppercase;
-    color:  $colorOnyx;
+    color: $colorOnyx;
 
     @include onTablet {
       padding: 0 45px;

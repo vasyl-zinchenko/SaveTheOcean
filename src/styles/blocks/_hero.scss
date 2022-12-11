@@ -21,7 +21,7 @@
     }
 
     @include onDesktop {
-      max-width: 400px;
+      max-width: 430px;
     }
   }
 
@@ -36,7 +36,7 @@
 
     &_black {
       font-size: 42px;
-      color:  $colorOnyx;
+      color: $colorOnyx;
       transition-duration: 0.5s;
 
       &--white {
@@ -68,7 +68,7 @@
       transition-duration: 0.5s;
 
       &--black {
-        color:  $colorOnyx;
+        color: $colorOnyx;
       }
 
       @include onTablet {
@@ -98,11 +98,11 @@
     font-weight: $fontWeight700;
     @include fontSizeLineHeight(14px, 15px);
     text-transform: uppercase;
-    color:  $colorOnyx;
+    color: $colorOnyx;
     padding: 16px 0;
     border-bottom: 1px solid $colorOnyx;
     cursor: pointer;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 
     &--active::after {
       content: url(/images/arrow-hero.svg);
@@ -116,7 +116,7 @@
 
     @include onDesktop {
       @include fontSizeLineHeight(15px, 16px);
-      padding: 13px 0;
+      padding: 25px 0;
     }
 
     &::after {
@@ -137,7 +137,7 @@
 
       &::after {
         content: url(/images/arrow-hero-white.svg);
-    }
+      }
 
       &:hover {
         color: $ButterflyBlue;
@@ -168,6 +168,8 @@
     }
 
     @include onDesktop {
+      padding: 16px 0 60px;
+
       &::after {
         content: "
         The purpose of lorem ipsum is to create a natural looking block
@@ -189,7 +191,6 @@
     @include onLaptop {
       margin: 0;
       @include size(auto, 100%);
-
     }
 
     &_slide {
@@ -217,6 +218,14 @@
       transform: translate(17px, -43px);
       gap: 17px;
       align-items: center;
+
+      @include onTablet {
+        transform: translate(25px, -55px);
+      }
+
+      @include onLaptopL {
+        transform: translate(30px, -70px);
+      }
     }
 
     &_pagination {
@@ -226,13 +235,20 @@
       @include fontSizeLineHeight(18px, 19px);
       color: $mainWhite;
 
+      @include onTablet {
+        @include fontSizeLineHeight(24px, 25px);
+      }
+
+      @include onLaptopL {
+        @include fontSizeLineHeight(36px, 37px);
+      }
+
       &--fist {
         font-weight: $fontWeight700;
       }
     }
 
     &_button-prev {
-
       &::after {
         content: "";
         display: block;
@@ -241,6 +257,15 @@
         transition: 0.2s;
         background-image: url(/images/array-left.svg);
         background-size: contain;
+        background-repeat: no-repeat;
+
+        @include onTablet {
+          @include size(28px, 32px);
+        }
+
+        @include onLaptopL {
+          @include size(41px, 47px);
+        }
       }
 
       &:hover:after {
@@ -248,6 +273,14 @@
         background-image: url(/images/array-left-hover.png);
         background-size: contain;
         @include size(20.94px, 24px);
+
+        @include onTablet {
+          @include size(28px, 32px);
+        }
+
+        @include onLaptopL {
+          @include size(41px, 47px);
+        }
       }
     }
 
@@ -257,13 +290,30 @@
         display: block;
         cursor: pointer;
         @include size(20.94px, 24px);
+        background-size: contain;
+        background-repeat: no-repeat;
         background-image: url(/images/array-right.svg);
-
         transition: 0.2s;
+
+        @include onTablet {
+          @include size(28px, 32px);
+        }
+
+        @include onLaptopL {
+          @include size(41px, 47px);
+        }
       }
       &:hover:after {
         content: "";
         background-image: url(/images/array-right-hover.svg);
+
+        @include onTablet {
+          @include size(28px, 32px);
+        }
+
+        @include onLaptopL {
+          @include size(41px, 47px);
+        }
       }
     }
   }
@@ -294,4 +344,3 @@
     opacity: 1;
   }
 }
-

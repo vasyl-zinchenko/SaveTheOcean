@@ -1,5 +1,4 @@
 .latest-news {
-
   &__swiper {
     margin-bottom: 56px;
 
@@ -13,7 +12,7 @@
     font-weight: $fontWeight700;
     @include fontSizeLineHeight(24px, 25px);
     text-transform: uppercase;
-    color:  $colorOnyx;
+    color: $colorOnyx;
     margin-bottom: 24px;
 
     @include onTablet {
@@ -29,7 +28,7 @@
     cursor: pointer;
 
     &:hover {
-      box-shadow: -6px 6px $ButterflyBlue, -6px 6px 0px 1px  $colorOnyx;
+      box-shadow: -6px 6px $ButterflyBlue, -6px 6px 0px 1px $colorOnyx;
     }
 
     &--night:hover {
@@ -65,7 +64,7 @@
       font-weight: $fontWeight700;
       @include fontSizeLineHeight(16px, 20px);
       text-transform: uppercase;
-      color:  $colorOnyx;
+      color: $colorOnyx;
 
       @include onTablet {
         font-size: 14px;

@@ -37,5 +37,7 @@ for (let i = 0; i < headers.length; i++) {
 
   if (getCountOfLine(headers[i]) === 6) {
     setLineClapm(newsCardText[i], 2);
+  } else {
+    setLineClapm(newsCardText[i], 2);
   }
 }

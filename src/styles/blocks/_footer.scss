@@ -1,6 +1,6 @@
 .footer {
   font-family: "Syncopate";
-  background:  $colorOnyx;
+  background: $colorOnyx;
   transition-duration: 0.5s;
 
   &--dark-theme {
@@ -27,8 +27,8 @@
     @include onDesktop {
       display: grid;
       grid-template-areas:
-      "logo logo"
-      "social contact";
+        "logo logo"
+        "social contact";
       column-gap: 25px;
     }
   }
@@ -42,7 +42,7 @@
     }
 
     &:hover {
-      background-color:$ButterflyBlue;
+      background-color: $ButterflyBlue;
     }
   }
 
