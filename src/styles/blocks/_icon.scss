@@ -2,7 +2,26 @@
   display: block;
   width: 24px;
   height: 24px;
-
   background-position: $backgroundPositionCenter;
   @extend %BackgroundNoRepeatContain;
+  transition-duration: 0.2s;
+
+  &__social-nav {
+    height: 32px;
+    width: 32px;
+    background: none;
+
+    &--dark {
+      & > path {
+        fill: white
+      }
+    }
+
+    & > path {
+      transition-duration: 0.5s;
+      &:hover {
+        fill: #24A9F4;
+      }
+    }
+  }
 }

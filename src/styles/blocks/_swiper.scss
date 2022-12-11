@@ -7,7 +7,7 @@
   display: -webkit-flex;
   display: flex;
   border: 1px solid #101010;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -17,6 +17,11 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  transition: 0.3s;
+
+  @include onTablet {
+    margin-bottom: 35px;
+  }
 }
 
 .swiper-slide__picture {
@@ -24,4 +29,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-scrollbar{
+  margin-top: 50px;
+}
+
+.awiper-slide {
+  transition-property: none;
+}
+
+.swiper-scrollbar-drag {
+  background: #101010;
+  border: 1px solid white;
+  box-sizing: border-box;
 }

@@ -2,12 +2,16 @@
   &__links {
     display: flex;
     flex-direction: column;
+    max-width: 335px;
+    margin: auto;
     gap: 16px;
 
     @include onTablet {
       flex-direction: row;
-      justify-content: center;
+      justify-content: start;
+      max-width: auto;
       gap: 24px;
+      margin: 0;
     }
 
     @include onLaptop {
@@ -18,7 +22,7 @@
   &__item {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 10px;
     text-decoration: none;
@@ -27,17 +31,16 @@
     font-family: "Syncopate";
     font-weight: 700;
     height: 48px;
-    background-color: white;
     color: #101010;
+    transition-duration: 0.5s;
 
     @include onTablet {
       flex-direction: row-reverse;
       height: 48px;
-      width: 100%;
     }
 
     @include onLaptop {
-      width: 196px;
+      width: auto;
     }
   }
 }

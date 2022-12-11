@@ -6,19 +6,21 @@
   top: 0;
   right: 0;
   z-index: 7;
-  background: $bgrColor;
-
+  background: white;
   transform: translateX(120%);
   transition: transform 0.5s ease;
-
   overflow: auto;
+
+  &--dark {
+    background: #101010;
+  }
 
   &:target {
     transform: translateX(0);
   }
 
   &__contact-us {
-    margin: 30px 30px 39px 0;
+    margin: 0;
 
     &__title {
       font-weight: 700;
@@ -26,6 +28,11 @@
       line-height: 21px;
       text-transform: uppercase;
       color: #101010;
+
+      @include onTablet {
+        font-size: 32px;
+        margin-bottom: 21px;
+      }
     }
   }
 
@@ -33,6 +40,11 @@
     display: flex;
     flex-direction: column;
     gap: 34px;
+
+    @include onTablet {
+      gap: 24px;
+      margin-bottom: 30px;
+    }
   }
 
   &__inforamtion-block {
@@ -45,12 +57,26 @@
       font-size: 14px;
       line-height: 15px;
       color: #101010;
+      transition: text-shadow .3s;
+      cursor: pointer;
+
+      &:hover {
+        text-shadow: -4px 2px #24a9f4;
+      }
+
+      @include onTablet {
+        font-size: 18px;
+      }
     }
 
     &_info {
       font-size: 12px;
       line-height: 12px;
       color: #bebebe;
+
+      @include onTablet {
+        font-size: 14px;
+      }
     }
   }
 
@@ -58,7 +84,27 @@
     transform: translate(-15px, 15px);
     margin-left: auto;
     height: 16px;
-    background-image: url(../images/cross.svg);
+
+    &:hover {
+      filter: contrast(0.5);
+    }
+
+    @include onLaptop {
+      position: absolute;
+      right: 0;
+    }
+
+    @include onLaptopL {
+      height: 24px;
+      position: absolute;
+      right: 0;
+    }
+
+    &--dark {
+      & > svg > path {
+        fill: white;
+      }
+    }
   }
 
   &__container-top {
@@ -79,12 +125,32 @@
     padding-top: 25px;
     margin-right: 30px;
     list-style: none;
+
+    @include onTablet {
+      margin-bottom: 220px;
+      padding-top: 40px;
+    }
+
+    @include onLaptop {
+      margin-right: 0;
+      padding-top: 51px;
+    }
+
+    @include onLaptop {
+      gap: 48px;
+      padding-top: 51px;
+
+    }
   }
 
   &__social-media__links {
     margin-bottom: 38px;
     display: flex;
     gap: 32px;
+
+    @include onTablet {
+      margin-bottom: 24px;
+    }
   }
 
   &__social-media__item {
@@ -107,21 +173,14 @@
       text-transform: uppercase;
       text-decoration: none;
       color: #101010;
+      transition: text-shadow .3s;
 
-      &::after {
-        position: absolute;
-        display: flex;
-        margin-top: 8px;
-        content: "";
-        height: 1px;
-        text-decoration: solid;
-        background-color: $colorBlack;
-        width: 0;
-        transition: width 0.3s;
+      &:hover {
+        text-shadow: -4px 2px #24a9f4;
       }
 
-      &:hover::after {
-        width: 100%;
+      @include onTablet {
+        font-size: 32px;
       }
     }
   }

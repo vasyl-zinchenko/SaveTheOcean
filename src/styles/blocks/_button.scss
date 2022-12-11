@@ -4,10 +4,11 @@
   border: none;
   cursor: pointer;
 
-  &--form {
-    width: 328px;
+  &__form {
+    width: 100%;
     height: 48px;
     margin: 16px 0 40px;
+    padding: 0;
     background: #101010;
     font-family: "Syncopate";
     font-weight: 700;
@@ -27,7 +28,7 @@
     }
 
     &:hover {
-      background: $colorSurfieGreen;
+      background: #24A9F4;;
     }
 
     &:focus {
@@ -36,6 +37,17 @@
 
     &:disabled {
       background: $colorPaleBlueLily;
+    }
+
+    &--blue {
+      background: #24A9F4;
+      box-shadow: none;
+      height: auto;
+      transition-duration: 0.5s;
+
+      &:hover {
+        background: #1485c5
+      }
     }
   }
 }

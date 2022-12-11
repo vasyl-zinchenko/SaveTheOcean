@@ -2,7 +2,6 @@
 
 const arrowRight = document.querySelector('.hero__slider_button-next');
 const arrowLeft = document.querySelector('.hero__slider_button-prev');
-
 const numberFirst = document.querySelector('.hero__slider_pagination--fist');
 const sections = document.querySelectorAll('.hero__slider_slide');
 

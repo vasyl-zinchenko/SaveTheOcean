@@ -1,12 +1,22 @@
+body {
+  transition-duration: 0.3s;
+}
+
 .page {
   scroll-behavior: smooth;
-  font-family: $fontFamilyInter;
-
 
   &__body {
     padding: 0 24px;
     background: white;
     overflow-x: hidden;
+    max-width: 1696px;
+    margin: auto;
+    transition-duration: 0.3s;
+
+    &--black {
+      background: #101010;
+      color: white;
+    }
 
     &--with-menu {
       overflow: hidden;
@@ -18,6 +28,10 @@
 
     @include onLaptop {
       padding: 0 50px;
+    }
+
+    @include onLaptopL {
+      padding: 0 71px;
     }
   }
 }

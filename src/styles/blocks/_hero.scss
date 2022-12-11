@@ -1,22 +1,27 @@
 .hero {
   @include onLaptop {
-    display: grid;
-    grid-template-columns: 1fr 2.8fr;
+    display: flex;
+    gap: 16px;
     margin-bottom: 71px;
   }
 
   @include onLaptopL {
-    margin-bottom: 88px;
+    margin: 16px 0 88px 0;
+    gap: 24px;
   }
 
   &__content {
     @include onLaptop {
-      margin-top: 9px;
+      margin-top: 0;
       max-width: 230px;
     }
 
     @include onLaptopL {
-      max-width: 288px;
+      max-width: 324px;
+    }
+
+    @include onDesktop {
+      max-width: 400px;
     }
   }
 
@@ -32,6 +37,11 @@
     &_black {
       font-size: 42px;
       color: #101010;
+      transition-duration: 0.5s;
+
+      &--white {
+        color: white;
+      }
 
       @include onTablet {
         font-size: 91px;
@@ -44,6 +54,10 @@
       @include onLaptopL {
         font-size: 37px;
       }
+
+      @include onDesktop {
+        font-size: 51px;
+      }
     }
 
     &_blue {
@@ -51,6 +65,11 @@
       color: white;
       border: #24a9f4;
       -webkit-text-stroke: 1px #24a9f4;
+      transition-duration: 0.5s;
+
+      &--black {
+        color: #101010;
+      }
 
       @include onTablet {
         font-size: 115px;
@@ -62,6 +81,11 @@
 
       @include onLaptopL {
         font-size: 47px;
+        -webkit-text-stroke: 1.5px #24a9f4;
+      }
+
+      @include onDesktop {
+        font-size: 64px;
       }
     }
   }
@@ -73,6 +97,18 @@
     line-height: 15px;
     text-transform: uppercase;
     color: #101010;
+
+    @include onLaptopL {
+      font-size: 16px;
+      line-height: 17px;
+      padding: 4px 0;
+    }
+
+    @include onDesktop {
+      font-size: 15px;
+      line-height: 16px;
+      padding: 13px 0;
+    }
   }
 
   &__paragraph {
@@ -80,15 +116,36 @@
     font-size: 14px;
     line-height: 22px;
     color: #101010;
+
+    @include onLaptopL {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include onDesktop {
+      &::after {
+        content: "
+        The purpose of lorem ipsum is to create a natural looking block
+        of text that doesn't distract from the layout. A practice not without controversy,
+        laying out pages with meaningless filler text can be very useful when the focus is
+        meant to be on design, not content
+        ";
+      }
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__slider {
-    margin-bottom: 20px;
-    
+    margin: 29px 0 50px 0;
+
     @include onTablet {
     }
 
     @include onLaptop {
+      margin: 0;
+      height: auto;
+      width: 100%;
     }
 
     &_slide {
@@ -100,6 +157,20 @@
       &-picture {
         object-fit: cover;
         width: inherit;
+
+        @include onLaptop {
+          height: 498px;
+          width: 100%;
+        }
+
+        @include onLaptopL {
+          height: 505px;
+          width: 100%;
+        }
+
+        @include onDesktop {
+          height: 682px;
+        }
       }
     }
 
@@ -177,7 +248,4 @@
   100% {
     opacity: 1;
   }
-}
-
-.swiper-scrollbar {
 }

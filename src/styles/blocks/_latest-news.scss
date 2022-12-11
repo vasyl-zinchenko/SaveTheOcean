@@ -1,4 +1,13 @@
 .latest-news {
+
+  &__swiper {
+    margin-bottom: 56px;
+
+    @include onLaptop {
+      margin-bottom: 20px;
+    }
+  }
+
   &__headline {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
@@ -18,11 +27,32 @@
   }
 
   &__card {
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: -6px 6px #24a9f4, -6px 6px 0px 1px #101010;
+    }
+
+    &--night:hover {
+      box-shadow: -6px 6px #24a9f4, -6px 6px 0px 1px white;
+    }
+
+
 
     &_content-wrapper {
       text-align: initial;
       height: 164px;
       margin: 11px 25px 25px 25px;
+
+      @include onTablet {
+        height: 205px;
+        margin: 10px 16px 25px 16px;
+      }
+
+      @include onDesktop {
+        height: 170px;
+        margin: 16px 24px 25px 24px;
+      }
     }
 
     &_headline {
@@ -33,6 +63,15 @@
       line-height: 20px;
       text-transform: uppercase;
       color: #101010;
+
+      @include onTablet {
+        font-size: 14px;
+      }
+
+      @include onLaptopL {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
     &_paragraph {
@@ -45,8 +84,13 @@
       display: block;
       overflow: hidden;
 
-      @include onTablet {
-        padding: 4px 16px 30px 16px;
+      @include onLaptop {
+        font-size: 14px;
+      }
+
+      @include onLaptopL {
+        font-size: 16px;
+        line-height: 24px;
       }
     }
   }

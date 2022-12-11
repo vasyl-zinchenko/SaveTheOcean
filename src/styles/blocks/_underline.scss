@@ -2,4 +2,12 @@
   height: 1px;
   background-color: #101010;
   margin: 16px 0;
+
+  &--white {
+    background-color: white;
+  }
+
+  &__last {
+    margin-bottom: 100px;
+  }
 }

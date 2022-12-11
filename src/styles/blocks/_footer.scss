@@ -1,10 +1,20 @@
 .footer {
   font-family: "Syncopate";
   background: #101010;
+  transition-duration: 0.5s;
+
+  &--dark-theme {
+    background: #272727;
+  }
 
   &__wrapper {
-    margin-top: 100px;
-    padding: 40px 30px;
+    max-width: 1696px;
+    margin: auto;
+    padding: 40px 30px 60px 30px;
+
+    @include onTablet {
+      padding: 60px 32px 72px 32px;
+    }
 
     @include onLaptop {
       padding: 60px 40px 80px 40px;
@@ -12,6 +22,27 @@
 
     @include onLaptopL {
       padding: 60px 71px 85px 71px;
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-areas:
+      "logo logo"
+      "social contact";
+      column-gap: 25px;
+    }
+  }
+
+  &__social-media_item {
+    padding-left: 24%;
+    background-color: white;
+
+    @include onTablet {
+      padding: 0 16px;
+    }
+
+    &:hover {
+      background-color:#24a9f4;
     }
   }
 
@@ -24,6 +55,10 @@
     @include onTablet {
       font-size: 36px;
       line-height: 37px;
+    }
+
+    @include onDesktop {
+      grid-area: logo;
     }
   }
 
@@ -52,8 +87,13 @@
     flex-direction: column;
     gap: 34px;
 
+    @include onTablet {
+      gap: 24px;
+    }
+
     @include onLaptop {
       flex-direction: row;
+      gap: 42px;
     }
   }
 
@@ -83,5 +123,9 @@
   &__bottom {
     height: 57px;
     background: #1a1a1a;
+
+    &--dark-theme {
+      background: #2d2d2d;
+    }
   }
 }
