@@ -1,6 +1,6 @@
 # Adaptive Landing Page Save The Ocean 
 ---------
-Click to see: [DEMO LINK](https://vasylzinchenko.github.io/SaveTheOcean/)
+Click to see: [DEMO LINK](https://vasyl-zinchenko.github.io/SaveTheOcean/)
 
 In this task:
 - I realize a simple slider and another slider was comleted with swiper
